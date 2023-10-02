@@ -1,3 +1,3 @@
 # PAU
 
-The code will be released soon.
+The full code will be released soon.
