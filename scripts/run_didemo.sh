@@ -14,5 +14,6 @@ python -m torch.distributed.launch --nproc_per_node=4 --master_port 29553\
     --feature_framerate 1 --coef_lr 1e-3 \
     --freeze_layer_num 0  --slice_framepos 2 \
     --tau 5 --K 8 --lambda1 1 --lambda2 100 --lambda3 0.025 \
+    --rerank_coe_v 0.05 --rerank_coe_t 0.05 \
     --loose_type --linear_patch 2d --sim_header seqTransf \
     --pretrained_clip_name ViT-B/32 2>&1 | tee -a log/${job_name}.out

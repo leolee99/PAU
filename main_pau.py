@@ -90,7 +90,10 @@ def get_args(description='PAU on Retrieval Task'):
     parser.add_argument("--K", default=8, type=int, help="the number of prototypes")
     parser.add_argument("--lambda1", default=1, type=float, help="the weight of sim_loss")
     parser.add_argument("--lambda2", default=100, type=float, help="the weight of uct_loss")
-    parser.add_argument("--lambda3", default=0.025, type=float, help="the weight of div_loss") 
+    parser.add_argument("--lambda3", default=0.025, type=float, help="the weight of div_loss")
+
+    parser.add_argument("--rerank_coe_v", default=0.05, type=float, help="the weight of vision modality while rerank")
+    parser.add_argument("--rerank_coe_t", default=0.05, type=float, help="the weight of text modality while rerank") 
 
     parser.add_argument('--loose_type', action='store_true', help="Default using tight type for retrieval.")
     parser.add_argument('--expand_msrvtt_sentences', action='store_true', help="")
@@ -419,7 +422,7 @@ def eval_epoch(args, model, test_dataloader, device, n_gpu, epoch=100):
         sim_matrix = np.concatenate(tuple(sim_matrix), axis=0)
 
         # simple re-rank
-        sim_matrix = np.exp(-0.05 * ret['vu_vector'].T) * np.exp(-0.05 * ret['tu_vector']) * sim_matrix
+        sim_matrix = np.exp(-args.rerank_coe_v * ret['vu_vector'].T) * np.exp(-args.rerank_coe_t * ret['tu_vector']) * sim_matrix
 
     if multi_sentence_:
         logger.info("before reshape, sim matrix size: {} x {}".format(sim_matrix.shape[0], sim_matrix.shape[1]))
