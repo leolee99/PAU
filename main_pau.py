@@ -418,6 +418,7 @@ def eval_epoch(args, model, test_dataloader, device, n_gpu, epoch=100):
         sim_matrix, ret = _run_on_single_gpu(model, batch_list_t, batch_list_v, batch_sequence_output_list, batch_seq_features_list, batch_visual_output_list)
         sim_matrix = np.concatenate(tuple(sim_matrix), axis=0)
 
+        # simple re-rank
         sim_matrix = np.exp(-0.05 * ret['vu_vector'].T) * np.exp(-0.05 * ret['tu_vector']) * sim_matrix
 
     if multi_sentence_:
@@ -556,10 +557,8 @@ def main():
                 output_model_file = save_model(epoch, args, model, optimizer, tr_loss, type_name="")
 
                 # Run on val dataset for selecting best model.
-                # logger.info("Eval on val dataset")
-                # R1 = eval_epoch(args, model, val_dataloader, device, n_gpu)
-                logger.info("Eval on test dataset")
-                R1 = eval_epoch(args, model, test_dataloader, device, n_gpu, epoch)
+                logger.info("Eval on val dataset")
+                R1 = eval_epoch(args, model, val_dataloader, device, n_gpu)
 
                 if best_score <= R1:
                     best_score = R1
