@@ -135,14 +135,12 @@ class PAU(CLIP4ClipPreTrainedModel):
         num_words = task_config.max_words
         num_frames = self.task_config.max_frames
 
-        # coarse-grained weights
+        # multi-grained weights
         self.global_mat_weight = nn.parameter.Parameter(torch.eye(embed_dim), requires_grad=True)
 
-        # cross-grained weights
         self.word_logit_weight = nn.parameter.Parameter(torch.eye(num_words), requires_grad=True)
         self.frame_logit_weight = nn.parameter.Parameter(torch.eye(num_frames), requires_grad=True)   
     
-        # fine-grained weights
         self.local_mat_weight = nn.parameter.Parameter(torch.eye(embed_dim), requires_grad=True)
         self.frame_mat_weight = nn.parameter.Parameter(torch.eye(num_frames), requires_grad=True)
         self.word_mat_weight = nn.parameter.Parameter(torch.eye(num_words), requires_grad=True)
