@@ -6,8 +6,9 @@ The implementation for NeurIPS 2023 paper of ["Prototype-based Aleatoric Uncerta
 
 
 <!-- PAU Introdcution -->
-
-<img src="assets/Introduction.png" width=80%>
+<p align="center">
+ <img src="assets/Framework.png" width=80%>
+</p>
 
 ## Requirement
 
