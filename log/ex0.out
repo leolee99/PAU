@@ -1,0 +1,609 @@
+12/22/2023 21:18:31 - INFO -   Effective parameters:
+12/22/2023 21:18:31 - INFO -     <<< K: 8
+12/22/2023 21:18:31 - INFO -     <<< batch_size: 32
+12/22/2023 21:18:31 - INFO -     <<< batch_size_val: 24
+12/22/2023 21:18:31 - INFO -     <<< cache_dir: 
+12/22/2023 21:18:31 - INFO -     <<< coef_lr: 0.001
+12/22/2023 21:18:31 - INFO -     <<< cross_model: cross-base
+12/22/2023 21:18:31 - INFO -     <<< cross_num_hidden_layers: 4
+12/22/2023 21:18:31 - INFO -     <<< data_path: ../data/VR_Dataset/DiDeMo/annotation
+12/22/2023 21:18:31 - INFO -     <<< datatype: didemo
+12/22/2023 21:18:31 - INFO -     <<< do_eval: True
+12/22/2023 21:18:31 - INFO -     <<< do_lower_case: False
+12/22/2023 21:18:31 - INFO -     <<< do_pretrain: False
+12/22/2023 21:18:31 - INFO -     <<< do_train: False
+12/22/2023 21:18:31 - INFO -     <<< epochs: 20
+12/22/2023 21:18:31 - INFO -     <<< eval_frame_order: 0
+12/22/2023 21:18:31 - INFO -     <<< expand_msrvtt_sentences: False
+12/22/2023 21:18:31 - INFO -     <<< feature_framerate: 1
+12/22/2023 21:18:31 - INFO -     <<< features_path: ../data/VR_Dataset/DiDeMo/video
+12/22/2023 21:18:31 - INFO -     <<< fp16: False
+12/22/2023 21:18:31 - INFO -     <<< fp16_opt_level: O1
+12/22/2023 21:18:31 - INFO -     <<< freeze_layer_num: 0
+12/22/2023 21:18:31 - INFO -     <<< gradient_accumulation_steps: 1
+12/22/2023 21:18:31 - INFO -     <<< hard_negative_rate: 0.5
+12/22/2023 21:18:31 - INFO -     <<< init_model: log/DiDeMo-pytorch_model.bin.0
+12/22/2023 21:18:31 - INFO -     <<< lambda1: 1.0
+12/22/2023 21:18:31 - INFO -     <<< lambda2: 100.0
+12/22/2023 21:18:31 - INFO -     <<< lambda3: 0.025
+12/22/2023 21:18:31 - INFO -     <<< linear_patch: 2d
+12/22/2023 21:18:31 - INFO -     <<< local_rank: 0
+12/22/2023 21:18:31 - INFO -     <<< loose_type: True
+12/22/2023 21:18:31 - INFO -     <<< lr: 0.0001
+12/22/2023 21:18:31 - INFO -     <<< lr_decay: 0.9
+12/22/2023 21:18:31 - INFO -     <<< margin: 0.1
+12/22/2023 21:18:31 - INFO -     <<< max_frames: 64
+12/22/2023 21:18:31 - INFO -     <<< max_words: 64
+12/22/2023 21:18:31 - INFO -     <<< n_display: 10
+12/22/2023 21:18:31 - INFO -     <<< n_gpu: 1
+12/22/2023 21:18:31 - INFO -     <<< n_pair: 1
+12/22/2023 21:18:31 - INFO -     <<< negative_weighting: 1
+12/22/2023 21:18:31 - INFO -     <<< num_thread_reader: 8
+12/22/2023 21:18:31 - INFO -     <<< output_dir: log
+12/22/2023 21:18:31 - INFO -     <<< precision: fp16
+12/22/2023 21:18:31 - INFO -     <<< pretrained_clip_name: ViT-B/32
+12/22/2023 21:18:31 - INFO -     <<< rank: 0
+12/22/2023 21:18:31 - INFO -     <<< rerank_coe_t: 0.05
+12/22/2023 21:18:31 - INFO -     <<< rerank_coe_v: 0.05
+12/22/2023 21:18:31 - INFO -     <<< resume_opt: None
+12/22/2023 21:18:31 - INFO -     <<< sampled_use_mil: False
+12/22/2023 21:18:31 - INFO -     <<< seed: 42
+12/22/2023 21:18:31 - INFO -     <<< sim_header: seqTransf
+12/22/2023 21:18:31 - INFO -     <<< slice_framepos: 2
+12/22/2023 21:18:31 - INFO -     <<< task_type: retrieval
+12/22/2023 21:18:31 - INFO -     <<< tau: 5
+12/22/2023 21:18:31 - INFO -     <<< text_num_hidden_layers: 12
+12/22/2023 21:18:31 - INFO -     <<< train_csv: data/.train.csv
+12/22/2023 21:18:31 - INFO -     <<< train_frame_order: 0
+12/22/2023 21:18:31 - INFO -     <<< use_mil: False
+12/22/2023 21:18:31 - INFO -     <<< val_csv: data/.val.csv
+12/22/2023 21:18:31 - INFO -     <<< video_dim: 1024
+12/22/2023 21:18:31 - INFO -     <<< visual_num_hidden_layers: 12
+12/22/2023 21:18:31 - INFO -     <<< warmup_proportion: 0.1
+12/22/2023 21:18:31 - INFO -     <<< world_size: 1
+12/22/2023 21:18:31 - INFO -   device: cuda:0 n_gpu: 1
+12/22/2023 21:18:35 - INFO -   loading archive file /home/lihao/PAU/modules/cross-base
+12/22/2023 21:18:35 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+12/22/2023 21:18:35 - INFO -   Weight doesn't exsits. /home/lihao/PAU/modules/cross-base/cross_pytorch_model.bin
+12/22/2023 21:18:35 - WARNING -   Stage-One:True, Stage-Two:False
+12/22/2023 21:18:35 - WARNING -   Test retrieval by loose type.
+12/22/2023 21:18:35 - WARNING -   	 embed_dim: 512
+12/22/2023 21:18:35 - WARNING -   	 image_resolution: 224
+12/22/2023 21:18:35 - WARNING -   	 vision_layers: 12
+12/22/2023 21:18:35 - WARNING -   	 vision_width: 768
+12/22/2023 21:18:35 - WARNING -   	 vision_patch_size: 32
+12/22/2023 21:18:35 - WARNING -   	 context_length: 77
+12/22/2023 21:18:35 - WARNING -   	 vocab_size: 49408
+12/22/2023 21:18:35 - WARNING -   	 transformer_width: 512
+12/22/2023 21:18:35 - WARNING -   	 transformer_heads: 8
+12/22/2023 21:18:35 - WARNING -   	 transformer_layers: 12
+12/22/2023 21:18:35 - WARNING -   		 linear_patch: 2d
+12/22/2023 21:18:35 - WARNING -   	 cut_top_layer: 0
+12/22/2023 21:18:38 - WARNING -   	 sim_header: seqTransf
+/home/lihao/miniconda3/envs/xclip/lib/python3.8/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+12/22/2023 21:18:47 - INFO -   --------------------
+12/22/2023 21:18:47 - INFO -   Weights of PAU not initialized from pretrained model: 
+   global_mat_weight
+   word_logit_weight
+   frame_logit_weight
+   local_mat_weight
+   frame_mat_weight
+   word_mat_weight
+   frame_mat_weight2
+   word_mat_weight2
+12/22/2023 21:18:47 - INFO -   Weights from pretrained model not used in PAU: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+12/22/2023 21:18:48 - INFO -   ***** Running test *****
+12/22/2023 21:18:48 - INFO -     Num examples = 824
+12/22/2023 21:18:48 - INFO -     Batch size = 24
+12/22/2023 21:18:48 - INFO -     Num steps = 35
+12/22/2023 21:18:48 - INFO -   ***** Running val *****
+12/22/2023 21:18:48 - INFO -     Num examples = 842
+12/22/2023 21:19:32 - INFO -   Effective parameters:
+12/22/2023 21:19:32 - INFO -     <<< K: 8
+12/22/2023 21:19:32 - INFO -     <<< batch_size: 32
+12/22/2023 21:19:32 - INFO -     <<< batch_size_val: 24
+12/22/2023 21:19:32 - INFO -     <<< cache_dir: 
+12/22/2023 21:19:32 - INFO -     <<< coef_lr: 0.001
+12/22/2023 21:19:32 - INFO -     <<< cross_model: cross-base
+12/22/2023 21:19:32 - INFO -     <<< cross_num_hidden_layers: 4
+12/22/2023 21:19:32 - INFO -     <<< data_path: ../data/VR_Dataset/DiDeMo/annotation
+12/22/2023 21:19:32 - INFO -     <<< datatype: didemo
+12/22/2023 21:19:32 - INFO -     <<< do_eval: True
+12/22/2023 21:19:32 - INFO -     <<< do_lower_case: False
+12/22/2023 21:19:32 - INFO -     <<< do_pretrain: False
+12/22/2023 21:19:32 - INFO -     <<< do_train: False
+12/22/2023 21:19:32 - INFO -     <<< epochs: 20
+12/22/2023 21:19:32 - INFO -     <<< eval_frame_order: 0
+12/22/2023 21:19:32 - INFO -     <<< expand_msrvtt_sentences: False
+12/22/2023 21:19:32 - INFO -     <<< feature_framerate: 1
+12/22/2023 21:19:32 - INFO -     <<< features_path: ../data/VR_Dataset/DiDeMo/video
+12/22/2023 21:19:32 - INFO -     <<< fp16: False
+12/22/2023 21:19:32 - INFO -     <<< fp16_opt_level: O1
+12/22/2023 21:19:32 - INFO -     <<< freeze_layer_num: 0
+12/22/2023 21:19:32 - INFO -     <<< gradient_accumulation_steps: 1
+12/22/2023 21:19:32 - INFO -     <<< hard_negative_rate: 0.5
+12/22/2023 21:19:32 - INFO -     <<< init_model: log/DiDeMo-pytorch_model.bin.0
+12/22/2023 21:19:32 - INFO -     <<< lambda1: 1.0
+12/22/2023 21:19:32 - INFO -     <<< lambda2: 100.0
+12/22/2023 21:19:32 - INFO -     <<< lambda3: 0.025
+12/22/2023 21:19:32 - INFO -     <<< linear_patch: 2d
+12/22/2023 21:19:32 - INFO -     <<< local_rank: 0
+12/22/2023 21:19:32 - INFO -     <<< loose_type: True
+12/22/2023 21:19:32 - INFO -     <<< lr: 0.0001
+12/22/2023 21:19:32 - INFO -     <<< lr_decay: 0.9
+12/22/2023 21:19:32 - INFO -     <<< margin: 0.1
+12/22/2023 21:19:32 - INFO -     <<< max_frames: 64
+12/22/2023 21:19:32 - INFO -     <<< max_words: 64
+12/22/2023 21:19:32 - INFO -     <<< n_display: 10
+12/22/2023 21:19:32 - INFO -     <<< n_gpu: 1
+12/22/2023 21:19:32 - INFO -     <<< n_pair: 1
+12/22/2023 21:19:32 - INFO -     <<< negative_weighting: 1
+12/22/2023 21:19:32 - INFO -     <<< num_thread_reader: 8
+12/22/2023 21:19:32 - INFO -     <<< output_dir: log
+12/22/2023 21:19:32 - INFO -     <<< precision: fp16
+12/22/2023 21:19:32 - INFO -     <<< pretrained_clip_name: ViT-B/32
+12/22/2023 21:19:32 - INFO -     <<< rank: 0
+12/22/2023 21:19:32 - INFO -     <<< rerank_coe_t: 0.05
+12/22/2023 21:19:32 - INFO -     <<< rerank_coe_v: 0.05
+12/22/2023 21:19:32 - INFO -     <<< resume_opt: None
+12/22/2023 21:19:32 - INFO -     <<< sampled_use_mil: False
+12/22/2023 21:19:32 - INFO -     <<< seed: 42
+12/22/2023 21:19:32 - INFO -     <<< sim_header: seqTransf
+12/22/2023 21:19:32 - INFO -     <<< slice_framepos: 2
+12/22/2023 21:19:32 - INFO -     <<< task_type: retrieval
+12/22/2023 21:19:32 - INFO -     <<< tau: 5
+12/22/2023 21:19:32 - INFO -     <<< text_num_hidden_layers: 12
+12/22/2023 21:19:32 - INFO -     <<< train_csv: data/.train.csv
+12/22/2023 21:19:32 - INFO -     <<< train_frame_order: 0
+12/22/2023 21:19:32 - INFO -     <<< use_mil: False
+12/22/2023 21:19:32 - INFO -     <<< val_csv: data/.val.csv
+12/22/2023 21:19:32 - INFO -     <<< video_dim: 1024
+12/22/2023 21:19:32 - INFO -     <<< visual_num_hidden_layers: 12
+12/22/2023 21:19:32 - INFO -     <<< warmup_proportion: 0.1
+12/22/2023 21:19:32 - INFO -     <<< world_size: 1
+12/22/2023 21:19:32 - INFO -   device: cuda:0 n_gpu: 1
+12/22/2023 21:19:34 - INFO -   loading archive file /home/lihao/PAU/modules/cross-base
+12/22/2023 21:19:34 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+12/22/2023 21:19:34 - INFO -   Weight doesn't exsits. /home/lihao/PAU/modules/cross-base/cross_pytorch_model.bin
+12/22/2023 21:19:34 - WARNING -   Stage-One:True, Stage-Two:False
+12/22/2023 21:19:34 - WARNING -   Test retrieval by loose type.
+12/22/2023 21:19:34 - WARNING -   	 embed_dim: 512
+12/22/2023 21:19:34 - WARNING -   	 image_resolution: 224
+12/22/2023 21:19:34 - WARNING -   	 vision_layers: 12
+12/22/2023 21:19:34 - WARNING -   	 vision_width: 768
+12/22/2023 21:19:34 - WARNING -   	 vision_patch_size: 32
+12/22/2023 21:19:34 - WARNING -   	 context_length: 77
+12/22/2023 21:19:34 - WARNING -   	 vocab_size: 49408
+12/22/2023 21:19:34 - WARNING -   	 transformer_width: 512
+12/22/2023 21:19:34 - WARNING -   	 transformer_heads: 8
+12/22/2023 21:19:34 - WARNING -   	 transformer_layers: 12
+12/22/2023 21:19:34 - WARNING -   		 linear_patch: 2d
+12/22/2023 21:19:34 - WARNING -   	 cut_top_layer: 0
+12/22/2023 21:19:36 - WARNING -   	 sim_header: seqTransf
+/home/lihao/miniconda3/envs/xclip/lib/python3.8/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+12/22/2023 21:19:42 - INFO -   --------------------
+12/22/2023 21:19:42 - INFO -   Weights of PAU not initialized from pretrained model: 
+   global_mat_weight
+   word_logit_weight
+   frame_logit_weight
+   local_mat_weight
+   frame_mat_weight
+   word_mat_weight
+   frame_mat_weight2
+   word_mat_weight2
+12/22/2023 21:19:42 - INFO -   Weights from pretrained model not used in PAU: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+12/22/2023 21:19:43 - INFO -   ***** Running test *****
+12/22/2023 21:19:43 - INFO -     Num examples = 824
+12/22/2023 21:19:43 - INFO -     Batch size = 24
+12/22/2023 21:19:43 - INFO -     Num steps = 35
+12/22/2023 21:19:43 - INFO -   ***** Running val *****
+12/22/2023 21:19:43 - INFO -     Num examples = 842
+0/351/352/353/354/355/356/357/358/359/3510/3511/3512/3513/3514/3515/3516/3517/3518/3519/3520/3521/3522/3523/3524/3525/3526/3527/3528/3529/3530/3531/3532/3533/3534/3512/22/2023 21:24:23 - INFO -   sim matrix size: 824, 824
+12/22/2023 21:24:23 - INFO -   	 Length-T: 824, Length-V:824
+12/22/2023 21:24:23 - INFO -   Text-to-Video:
+12/22/2023 21:24:23 - INFO -   	>>>  R@1: 47.6 - R@5: 76.3 - R@10: 83.9 - Median R: 2.0 - Mean R: 12.7
+12/22/2023 21:24:23 - INFO -   Video-to-Text:
+12/22/2023 21:24:23 - INFO -   	>>>  V2T$R@1: 47.9 - V2T$R@5: 74.2 - V2T$R@10: 85.3 - V2T$Median R: 2.0 - V2T$Mean R: 9.9
+12/22/2023 21:26:16 - INFO -   Effective parameters:
+12/22/2023 21:26:16 - INFO -     <<< K: 8
+12/22/2023 21:26:16 - INFO -     <<< batch_size: 32
+12/22/2023 21:26:16 - INFO -     <<< batch_size_val: 24
+12/22/2023 21:26:16 - INFO -     <<< cache_dir: 
+12/22/2023 21:26:16 - INFO -     <<< coef_lr: 0.001
+12/22/2023 21:26:16 - INFO -     <<< cross_model: cross-base
+12/22/2023 21:26:16 - INFO -     <<< cross_num_hidden_layers: 4
+12/22/2023 21:26:16 - INFO -     <<< data_path: ../data/VR_Dataset/DiDeMo/annotation
+12/22/2023 21:26:16 - INFO -     <<< datatype: didemo
+12/22/2023 21:26:16 - INFO -     <<< do_eval: True
+12/22/2023 21:26:16 - INFO -     <<< do_lower_case: False
+12/22/2023 21:26:16 - INFO -     <<< do_pretrain: False
+12/22/2023 21:26:16 - INFO -     <<< do_train: False
+12/22/2023 21:26:16 - INFO -     <<< epochs: 20
+12/22/2023 21:26:16 - INFO -     <<< eval_frame_order: 0
+12/22/2023 21:26:16 - INFO -     <<< expand_msrvtt_sentences: False
+12/22/2023 21:26:16 - INFO -     <<< feature_framerate: 1
+12/22/2023 21:26:16 - INFO -     <<< features_path: ../data/VR_Dataset/DiDeMo/video
+12/22/2023 21:26:16 - INFO -     <<< fp16: False
+12/22/2023 21:26:16 - INFO -     <<< fp16_opt_level: O1
+12/22/2023 21:26:16 - INFO -     <<< freeze_layer_num: 0
+12/22/2023 21:26:16 - INFO -     <<< gradient_accumulation_steps: 1
+12/22/2023 21:26:16 - INFO -     <<< hard_negative_rate: 0.5
+12/22/2023 21:26:16 - INFO -     <<< init_model: log/DiDeMo-pytorch_model.bin.0
+12/22/2023 21:26:16 - INFO -     <<< lambda1: 1.0
+12/22/2023 21:26:16 - INFO -     <<< lambda2: 100.0
+12/22/2023 21:26:16 - INFO -     <<< lambda3: 0.025
+12/22/2023 21:26:16 - INFO -     <<< linear_patch: 2d
+12/22/2023 21:26:16 - INFO -     <<< local_rank: 0
+12/22/2023 21:26:16 - INFO -     <<< loose_type: True
+12/22/2023 21:26:16 - INFO -     <<< lr: 0.0001
+12/22/2023 21:26:16 - INFO -     <<< lr_decay: 0.9
+12/22/2023 21:26:16 - INFO -     <<< margin: 0.1
+12/22/2023 21:26:16 - INFO -     <<< max_frames: 64
+12/22/2023 21:26:16 - INFO -     <<< max_words: 64
+12/22/2023 21:26:16 - INFO -     <<< n_display: 10
+12/22/2023 21:26:16 - INFO -     <<< n_gpu: 1
+12/22/2023 21:26:16 - INFO -     <<< n_pair: 1
+12/22/2023 21:26:16 - INFO -     <<< negative_weighting: 1
+12/22/2023 21:26:16 - INFO -     <<< num_thread_reader: 8
+12/22/2023 21:26:16 - INFO -     <<< output_dir: log
+12/22/2023 21:26:16 - INFO -     <<< precision: fp16
+12/22/2023 21:26:16 - INFO -     <<< pretrained_clip_name: ViT-B/32
+12/22/2023 21:26:16 - INFO -     <<< rank: 0
+12/22/2023 21:26:16 - INFO -     <<< rerank_coe_t: 0.5
+12/22/2023 21:26:16 - INFO -     <<< rerank_coe_v: 0.5
+12/22/2023 21:26:16 - INFO -     <<< resume_opt: None
+12/22/2023 21:26:16 - INFO -     <<< sampled_use_mil: False
+12/22/2023 21:26:16 - INFO -     <<< seed: 42
+12/22/2023 21:26:16 - INFO -     <<< sim_header: seqTransf
+12/22/2023 21:26:16 - INFO -     <<< slice_framepos: 2
+12/22/2023 21:26:16 - INFO -     <<< task_type: retrieval
+12/22/2023 21:26:16 - INFO -     <<< tau: 5
+12/22/2023 21:26:16 - INFO -     <<< text_num_hidden_layers: 12
+12/22/2023 21:26:16 - INFO -     <<< train_csv: data/.train.csv
+12/22/2023 21:26:16 - INFO -     <<< train_frame_order: 0
+12/22/2023 21:26:16 - INFO -     <<< use_mil: False
+12/22/2023 21:26:16 - INFO -     <<< val_csv: data/.val.csv
+12/22/2023 21:26:16 - INFO -     <<< video_dim: 1024
+12/22/2023 21:26:16 - INFO -     <<< visual_num_hidden_layers: 12
+12/22/2023 21:26:16 - INFO -     <<< warmup_proportion: 0.1
+12/22/2023 21:26:16 - INFO -     <<< world_size: 1
+12/22/2023 21:26:16 - INFO -   device: cuda:0 n_gpu: 1
+12/22/2023 21:26:19 - INFO -   loading archive file /home/lihao/PAU/modules/cross-base
+12/22/2023 21:26:19 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+12/22/2023 21:26:19 - INFO -   Weight doesn't exsits. /home/lihao/PAU/modules/cross-base/cross_pytorch_model.bin
+12/22/2023 21:26:19 - WARNING -   Stage-One:True, Stage-Two:False
+12/22/2023 21:26:19 - WARNING -   Test retrieval by loose type.
+12/22/2023 21:26:19 - WARNING -   	 embed_dim: 512
+12/22/2023 21:26:19 - WARNING -   	 image_resolution: 224
+12/22/2023 21:26:19 - WARNING -   	 vision_layers: 12
+12/22/2023 21:26:19 - WARNING -   	 vision_width: 768
+12/22/2023 21:26:19 - WARNING -   	 vision_patch_size: 32
+12/22/2023 21:26:19 - WARNING -   	 context_length: 77
+12/22/2023 21:26:19 - WARNING -   	 vocab_size: 49408
+12/22/2023 21:26:19 - WARNING -   	 transformer_width: 512
+12/22/2023 21:26:19 - WARNING -   	 transformer_heads: 8
+12/22/2023 21:26:19 - WARNING -   	 transformer_layers: 12
+12/22/2023 21:26:19 - WARNING -   		 linear_patch: 2d
+12/22/2023 21:26:19 - WARNING -   	 cut_top_layer: 0
+12/22/2023 21:26:21 - WARNING -   	 sim_header: seqTransf
+/home/lihao/miniconda3/envs/xclip/lib/python3.8/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+12/22/2023 21:26:30 - INFO -   --------------------
+12/22/2023 21:26:30 - INFO -   Weights of PAU not initialized from pretrained model: 
+   global_mat_weight
+   word_logit_weight
+   frame_logit_weight
+   local_mat_weight
+   frame_mat_weight
+   word_mat_weight
+   frame_mat_weight2
+   word_mat_weight2
+12/22/2023 21:26:30 - INFO -   Weights from pretrained model not used in PAU: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+12/22/2023 21:26:31 - INFO -   ***** Running test *****
+12/22/2023 21:26:31 - INFO -     Num examples = 824
+12/22/2023 21:26:31 - INFO -     Batch size = 24
+12/22/2023 21:26:31 - INFO -     Num steps = 35
+12/22/2023 21:26:31 - INFO -   ***** Running val *****
+12/22/2023 21:26:31 - INFO -     Num examples = 842
+0/351/352/353/354/355/356/357/358/359/3510/3511/3512/3513/3514/3515/3516/3517/3518/3519/3520/3521/3522/3523/3524/3525/3526/3527/3528/3529/3530/3531/3532/3533/3534/3512/22/2023 21:31:04 - INFO -   sim matrix size: 824, 824
+12/22/2023 21:31:04 - INFO -   	 Length-T: 824, Length-V:824
+12/22/2023 21:31:04 - INFO -   Text-to-Video:
+12/22/2023 21:31:04 - INFO -   	>>>  R@1: 47.6 - R@5: 76.3 - R@10: 84.0 - Median R: 2.0 - Mean R: 12.7
+12/22/2023 21:31:04 - INFO -   Video-to-Text:
+12/22/2023 21:31:04 - INFO -   	>>>  V2T$R@1: 47.9 - V2T$R@5: 74.3 - V2T$R@10: 85.3 - V2T$Median R: 2.0 - V2T$Mean R: 9.8
+12/22/2023 21:31:31 - INFO -   Effective parameters:
+12/22/2023 21:31:31 - INFO -     <<< K: 8
+12/22/2023 21:31:31 - INFO -     <<< batch_size: 32
+12/22/2023 21:31:31 - INFO -     <<< batch_size_val: 24
+12/22/2023 21:31:31 - INFO -     <<< cache_dir: 
+12/22/2023 21:31:31 - INFO -     <<< coef_lr: 0.001
+12/22/2023 21:31:31 - INFO -     <<< cross_model: cross-base
+12/22/2023 21:31:31 - INFO -     <<< cross_num_hidden_layers: 4
+12/22/2023 21:31:31 - INFO -     <<< data_path: ../data/VR_Dataset/DiDeMo/annotation
+12/22/2023 21:31:31 - INFO -     <<< datatype: didemo
+12/22/2023 21:31:31 - INFO -     <<< do_eval: True
+12/22/2023 21:31:31 - INFO -     <<< do_lower_case: False
+12/22/2023 21:31:31 - INFO -     <<< do_pretrain: False
+12/22/2023 21:31:31 - INFO -     <<< do_train: False
+12/22/2023 21:31:31 - INFO -     <<< epochs: 20
+12/22/2023 21:31:31 - INFO -     <<< eval_frame_order: 0
+12/22/2023 21:31:31 - INFO -     <<< expand_msrvtt_sentences: False
+12/22/2023 21:31:31 - INFO -     <<< feature_framerate: 1
+12/22/2023 21:31:31 - INFO -     <<< features_path: ../data/VR_Dataset/DiDeMo/video
+12/22/2023 21:31:31 - INFO -     <<< fp16: False
+12/22/2023 21:31:31 - INFO -     <<< fp16_opt_level: O1
+12/22/2023 21:31:31 - INFO -     <<< freeze_layer_num: 0
+12/22/2023 21:31:31 - INFO -     <<< gradient_accumulation_steps: 1
+12/22/2023 21:31:31 - INFO -     <<< hard_negative_rate: 0.5
+12/22/2023 21:31:31 - INFO -     <<< init_model: log/DiDeMo-pytorch_model.bin.0
+12/22/2023 21:31:31 - INFO -     <<< lambda1: 1.0
+12/22/2023 21:31:31 - INFO -     <<< lambda2: 100.0
+12/22/2023 21:31:31 - INFO -     <<< lambda3: 0.025
+12/22/2023 21:31:31 - INFO -     <<< linear_patch: 2d
+12/22/2023 21:31:31 - INFO -     <<< local_rank: 0
+12/22/2023 21:31:31 - INFO -     <<< loose_type: True
+12/22/2023 21:31:31 - INFO -     <<< lr: 0.0001
+12/22/2023 21:31:31 - INFO -     <<< lr_decay: 0.9
+12/22/2023 21:31:31 - INFO -     <<< margin: 0.1
+12/22/2023 21:31:31 - INFO -     <<< max_frames: 64
+12/22/2023 21:31:31 - INFO -     <<< max_words: 64
+12/22/2023 21:31:31 - INFO -     <<< n_display: 10
+12/22/2023 21:31:31 - INFO -     <<< n_gpu: 1
+12/22/2023 21:31:31 - INFO -     <<< n_pair: 1
+12/22/2023 21:31:31 - INFO -     <<< negative_weighting: 1
+12/22/2023 21:31:31 - INFO -     <<< num_thread_reader: 8
+12/22/2023 21:31:31 - INFO -     <<< output_dir: log
+12/22/2023 21:31:31 - INFO -     <<< precision: fp16
+12/22/2023 21:31:31 - INFO -     <<< pretrained_clip_name: ViT-B/32
+12/22/2023 21:31:31 - INFO -     <<< rank: 0
+12/22/2023 21:31:31 - INFO -     <<< rerank_coe_t: 1.0
+12/22/2023 21:31:31 - INFO -     <<< rerank_coe_v: 4.5
+12/22/2023 21:31:31 - INFO -     <<< resume_opt: None
+12/22/2023 21:31:31 - INFO -     <<< sampled_use_mil: False
+12/22/2023 21:31:31 - INFO -     <<< seed: 42
+12/22/2023 21:31:31 - INFO -     <<< sim_header: seqTransf
+12/22/2023 21:31:31 - INFO -     <<< slice_framepos: 2
+12/22/2023 21:31:31 - INFO -     <<< task_type: retrieval
+12/22/2023 21:31:31 - INFO -     <<< tau: 5
+12/22/2023 21:31:31 - INFO -     <<< text_num_hidden_layers: 12
+12/22/2023 21:31:31 - INFO -     <<< train_csv: data/.train.csv
+12/22/2023 21:31:31 - INFO -     <<< train_frame_order: 0
+12/22/2023 21:31:31 - INFO -     <<< use_mil: False
+12/22/2023 21:31:31 - INFO -     <<< val_csv: data/.val.csv
+12/22/2023 21:31:31 - INFO -     <<< video_dim: 1024
+12/22/2023 21:31:31 - INFO -     <<< visual_num_hidden_layers: 12
+12/22/2023 21:31:31 - INFO -     <<< warmup_proportion: 0.1
+12/22/2023 21:31:31 - INFO -     <<< world_size: 1
+12/22/2023 21:31:31 - INFO -   device: cuda:0 n_gpu: 1
+12/22/2023 21:31:33 - INFO -   loading archive file /home/lihao/PAU/modules/cross-base
+12/22/2023 21:31:33 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+12/22/2023 21:31:33 - INFO -   Weight doesn't exsits. /home/lihao/PAU/modules/cross-base/cross_pytorch_model.bin
+12/22/2023 21:31:33 - WARNING -   Stage-One:True, Stage-Two:False
+12/22/2023 21:31:33 - WARNING -   Test retrieval by loose type.
+12/22/2023 21:31:33 - WARNING -   	 embed_dim: 512
+12/22/2023 21:31:33 - WARNING -   	 image_resolution: 224
+12/22/2023 21:31:33 - WARNING -   	 vision_layers: 12
+12/22/2023 21:31:33 - WARNING -   	 vision_width: 768
+12/22/2023 21:31:33 - WARNING -   	 vision_patch_size: 32
+12/22/2023 21:31:33 - WARNING -   	 context_length: 77
+12/22/2023 21:31:33 - WARNING -   	 vocab_size: 49408
+12/22/2023 21:31:33 - WARNING -   	 transformer_width: 512
+12/22/2023 21:31:33 - WARNING -   	 transformer_heads: 8
+12/22/2023 21:31:33 - WARNING -   	 transformer_layers: 12
+12/22/2023 21:31:33 - WARNING -   		 linear_patch: 2d
+12/22/2023 21:31:33 - WARNING -   	 cut_top_layer: 0
+12/22/2023 21:31:36 - WARNING -   	 sim_header: seqTransf
+/home/lihao/miniconda3/envs/xclip/lib/python3.8/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+12/22/2023 21:31:45 - INFO -   --------------------
+12/22/2023 21:31:45 - INFO -   Weights of PAU not initialized from pretrained model: 
+   global_mat_weight
+   word_logit_weight
+   frame_logit_weight
+   local_mat_weight
+   frame_mat_weight
+   word_mat_weight
+   frame_mat_weight2
+   word_mat_weight2
+12/22/2023 21:31:45 - INFO -   Weights from pretrained model not used in PAU: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+12/22/2023 21:31:46 - INFO -   ***** Running test *****
+12/22/2023 21:31:46 - INFO -     Num examples = 824
+12/22/2023 21:31:46 - INFO -     Batch size = 24
+12/22/2023 21:31:46 - INFO -     Num steps = 35
+12/22/2023 21:31:46 - INFO -   ***** Running val *****
+12/22/2023 21:31:46 - INFO -     Num examples = 842
+0/351/352/353/354/355/356/357/358/359/3510/3511/3512/3513/3514/3515/3516/3517/3518/3519/3520/3521/3522/3523/3524/3525/3526/3527/3528/3529/3530/3531/3532/3533/3534/3512/22/2023 21:36:38 - INFO -   sim matrix size: 824, 824
+12/22/2023 21:36:38 - INFO -   	 Length-T: 824, Length-V:824
+12/22/2023 21:36:38 - INFO -   Text-to-Video:
+12/22/2023 21:36:38 - INFO -   	>>>  R@1: 48.6 - R@5: 76.0 - R@10: 84.5 - Median R: 2.0 - Mean R: 12.9
+12/22/2023 21:36:38 - INFO -   Video-to-Text:
+12/22/2023 21:36:38 - INFO -   	>>>  V2T$R@1: 48.1 - V2T$R@5: 74.2 - V2T$R@10: 85.7 - V2T$Median R: 2.0 - V2T$Mean R: 9.8
+12/22/2023 21:37:22 - INFO -   Effective parameters:
+12/22/2023 21:37:22 - INFO -     <<< K: 8
+12/22/2023 21:37:22 - INFO -     <<< batch_size: 32
+12/22/2023 21:37:22 - INFO -     <<< batch_size_val: 24
+12/22/2023 21:37:22 - INFO -     <<< cache_dir: 
+12/22/2023 21:37:22 - INFO -     <<< coef_lr: 0.001
+12/22/2023 21:37:22 - INFO -     <<< cross_model: cross-base
+12/22/2023 21:37:22 - INFO -     <<< cross_num_hidden_layers: 4
+12/22/2023 21:37:22 - INFO -     <<< data_path: ../data/VR_Dataset/DiDeMo/annotation
+12/22/2023 21:37:22 - INFO -     <<< datatype: didemo
+12/22/2023 21:37:22 - INFO -     <<< do_eval: True
+12/22/2023 21:37:22 - INFO -     <<< do_lower_case: False
+12/22/2023 21:37:22 - INFO -     <<< do_pretrain: False
+12/22/2023 21:37:22 - INFO -     <<< do_train: False
+12/22/2023 21:37:22 - INFO -     <<< epochs: 20
+12/22/2023 21:37:22 - INFO -     <<< eval_frame_order: 0
+12/22/2023 21:37:22 - INFO -     <<< expand_msrvtt_sentences: False
+12/22/2023 21:37:22 - INFO -     <<< feature_framerate: 1
+12/22/2023 21:37:22 - INFO -     <<< features_path: ../data/VR_Dataset/DiDeMo/video
+12/22/2023 21:37:22 - INFO -     <<< fp16: False
+12/22/2023 21:37:22 - INFO -     <<< fp16_opt_level: O1
+12/22/2023 21:37:22 - INFO -     <<< freeze_layer_num: 0
+12/22/2023 21:37:22 - INFO -     <<< gradient_accumulation_steps: 1
+12/22/2023 21:37:22 - INFO -     <<< hard_negative_rate: 0.5
+12/22/2023 21:37:22 - INFO -     <<< init_model: log/DiDeMo-pytorch_model.bin.0
+12/22/2023 21:37:22 - INFO -     <<< lambda1: 1
+12/22/2023 21:37:22 - INFO -     <<< lambda2: 100
+12/22/2023 21:37:22 - INFO -     <<< lambda3: 0.025
+12/22/2023 21:37:22 - INFO -     <<< linear_patch: 2d
+12/22/2023 21:37:22 - INFO -     <<< local_rank: 0
+12/22/2023 21:37:22 - INFO -     <<< loose_type: True
+12/22/2023 21:37:22 - INFO -     <<< lr: 0.0001
+12/22/2023 21:37:22 - INFO -     <<< lr_decay: 0.9
+12/22/2023 21:37:22 - INFO -     <<< margin: 0.1
+12/22/2023 21:37:22 - INFO -     <<< max_frames: 64
+12/22/2023 21:37:22 - INFO -     <<< max_words: 64
+12/22/2023 21:37:22 - INFO -     <<< n_display: 10
+12/22/2023 21:37:22 - INFO -     <<< n_gpu: 1
+12/22/2023 21:37:22 - INFO -     <<< n_pair: 1
+12/22/2023 21:37:22 - INFO -     <<< negative_weighting: 1
+12/22/2023 21:37:22 - INFO -     <<< num_thread_reader: 8
+12/22/2023 21:37:22 - INFO -     <<< output_dir: log
+12/22/2023 21:37:22 - INFO -     <<< precision: fp16
+12/22/2023 21:37:22 - INFO -     <<< pretrained_clip_name: ViT-B/32
+12/22/2023 21:37:22 - INFO -     <<< rank: 0
+12/22/2023 21:37:22 - INFO -     <<< rerank_coe_t: 1.0
+12/22/2023 21:37:22 - INFO -     <<< rerank_coe_v: 5.0
+12/22/2023 21:37:22 - INFO -     <<< resume_opt: None
+12/22/2023 21:37:22 - INFO -     <<< sampled_use_mil: False
+12/22/2023 21:37:22 - INFO -     <<< seed: 42
+12/22/2023 21:37:22 - INFO -     <<< sim_header: seqTransf
+12/22/2023 21:37:22 - INFO -     <<< slice_framepos: 2
+12/22/2023 21:37:22 - INFO -     <<< task_type: retrieval
+12/22/2023 21:37:22 - INFO -     <<< tau: 5
+12/22/2023 21:37:22 - INFO -     <<< text_num_hidden_layers: 12
+12/22/2023 21:37:22 - INFO -     <<< train_csv: data/.train.csv
+12/22/2023 21:37:22 - INFO -     <<< train_frame_order: 0
+12/22/2023 21:37:22 - INFO -     <<< use_mil: False
+12/22/2023 21:37:22 - INFO -     <<< val_csv: data/.val.csv
+12/22/2023 21:37:22 - INFO -     <<< video_dim: 1024
+12/22/2023 21:37:22 - INFO -     <<< visual_num_hidden_layers: 12
+12/22/2023 21:37:22 - INFO -     <<< warmup_proportion: 0.1
+12/22/2023 21:37:22 - INFO -     <<< world_size: 1
+12/22/2023 21:37:22 - INFO -   device: cuda:0 n_gpu: 1
+12/22/2023 21:37:25 - INFO -   loading archive file /home/lihao/PAU/modules/cross-base
+12/22/2023 21:37:25 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+12/22/2023 21:37:25 - INFO -   Weight doesn't exsits. /home/lihao/PAU/modules/cross-base/cross_pytorch_model.bin
+12/22/2023 21:37:25 - WARNING -   Stage-One:True, Stage-Two:False
+12/22/2023 21:37:25 - WARNING -   Test retrieval by loose type.
+12/22/2023 21:37:25 - WARNING -   	 embed_dim: 512
+12/22/2023 21:37:25 - WARNING -   	 image_resolution: 224
+12/22/2023 21:37:25 - WARNING -   	 vision_layers: 12
+12/22/2023 21:37:25 - WARNING -   	 vision_width: 768
+12/22/2023 21:37:25 - WARNING -   	 vision_patch_size: 32
+12/22/2023 21:37:25 - WARNING -   	 context_length: 77
+12/22/2023 21:37:25 - WARNING -   	 vocab_size: 49408
+12/22/2023 21:37:25 - WARNING -   	 transformer_width: 512
+12/22/2023 21:37:25 - WARNING -   	 transformer_heads: 8
+12/22/2023 21:37:25 - WARNING -   	 transformer_layers: 12
+12/22/2023 21:37:25 - WARNING -   		 linear_patch: 2d
+12/22/2023 21:37:25 - WARNING -   	 cut_top_layer: 0
+12/22/2023 21:37:28 - WARNING -   	 sim_header: seqTransf
+/home/lihao/miniconda3/envs/xclip/lib/python3.8/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+12/22/2023 21:37:37 - INFO -   --------------------
+12/22/2023 21:37:37 - INFO -   Weights of PAU not initialized from pretrained model: 
+   global_mat_weight
+   word_logit_weight
+   frame_logit_weight
+   local_mat_weight
+   frame_mat_weight
+   word_mat_weight
+   frame_mat_weight2
+   word_mat_weight2
+12/22/2023 21:37:37 - INFO -   Weights from pretrained model not used in PAU: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+12/22/2023 21:37:38 - INFO -   ***** Running test *****
+12/22/2023 21:37:38 - INFO -     Num examples = 824
+12/22/2023 21:37:38 - INFO -     Batch size = 24
+12/22/2023 21:37:38 - INFO -     Num steps = 35
+12/22/2023 21:37:38 - INFO -   ***** Running val *****
+12/22/2023 21:37:38 - INFO -     Num examples = 842
+0/351/352/353/354/355/356/357/358/359/3510/3511/3512/3513/3514/3515/3516/3517/3518/3519/3520/3521/3522/3523/3524/3525/3526/3527/3528/3529/3530/3531/3532/3533/3534/3512/22/2023 21:42:31 - INFO -   sim matrix size: 824, 824
+12/22/2023 21:42:31 - INFO -   	 Length-T: 824, Length-V:824
+12/22/2023 21:42:31 - INFO -   Text-to-Video:
+12/22/2023 21:42:31 - INFO -   	>>>  R@1: 48.4 - R@5: 75.9 - R@10: 84.3 - Median R: 2.0 - Mean R: 13.0
+12/22/2023 21:42:31 - INFO -   Video-to-Text:
+12/22/2023 21:42:31 - INFO -   	>>>  V2T$R@1: 48.1 - V2T$R@5: 74.2 - V2T$R@10: 85.7 - V2T$Median R: 2.0 - V2T$Mean R: 9.8
