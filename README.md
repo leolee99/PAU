@@ -55,7 +55,7 @@ We provide the trained model files for evaluation. You can download the model tr
 
 ## Training
 
-Please edit the ```${DATA_PATH}``` to the path of your dataset, and the ```${SAVE_PATH}``` to the path of the checkpoints you want to save.
+Please edit the ```${DATA_PATH}``` to the path of your dataset, and the ```${SAVE_PATH}``` to the path of the checkpoints where to save.
 
 **MSR-VTT**
 
@@ -76,6 +76,8 @@ sh scripts/run_didemo.sh
 ```
 
 ## Evaluation
+
+Please edit the ```${DATA_PATH}``` to the path of your dataset, the ```${SAVE_PATH}``` to the path of the checkpoints where to save, and the ```${MODEL_PATH}``` to the path of the checkpoints to be loaded.
 
 **MSR-VTT**
 
