@@ -2,6 +2,7 @@ export CUDA_VISIBLE_DEVICES=9
 
 job_name="ex0"
 DATA_PATH="../data/VR_Dataset"
+SAVE_PATH="log"
 python -m torch.distributed.launch --nproc_per_node=1 --master_port 29555\
     main_pau.py --do_eval --num_thread_reader=8 \
     --epochs=20 --batch_size=32 --n_display=10 \
