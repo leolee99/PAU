@@ -55,6 +55,8 @@ We provide the trained model files for evaluation. You can download the model tr
 
 ## Training
 
+Please edit the ```${DATA_PATH}``` to the path of your dataset, and the ```${SAVE_PATH}``` to the path of the checkpoints you want to save.
+
 **MSR-VTT**
 
 ```bash
