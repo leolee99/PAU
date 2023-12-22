@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The implementation of Aleatoric Uncertainty Quantification for Cross-modal Retrieval.
+The implementation for NeurIPS 2023 paper of ["Prototype-based Aleatoric Uncertainty Quantification for Cross-modal Retrieval."](https://openreview.net/pdf?id=ECRgBK6sk1).
 
 
 <!-- PAU Introdcution -->
@@ -93,3 +93,18 @@ sh scripts/run_msvd_eval.sh
 sh scripts/run_didemo_eval.sh
 ```
 
+## Reference
+
+If you found this code useful, please cite the following paper:
+```
+@inproceedings{PAU,
+  author    = {Hao Li and
+               Jingkuan Song and
+               Lianli Gao and
+               Xiaosu Zhu and
+               Heng Tao Shen},
+  title     = {Prototype-based Aleatoric Uncertainty Quantification for Cross-modal Retrieval},
+  booktitle = {NeurIPS},
+  year      = {2023}
+}
+```
