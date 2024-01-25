@@ -14,6 +14,7 @@ from modules.tokenization_clip import SimpleTokenizer as ClipTokenizer
 from modules.file_utils import PYTORCH_PRETRAINED_BERT_CACHE
 from modules.modeling_pau import PAU
 from modules.optimization import BertAdam
+from scipy.optimize import minimize
 
 from util import parallel_apply, get_logger
 from dataloaders.data_dataloaders import DATALOADER_DICT
@@ -27,6 +28,7 @@ def get_args(description='PAU on Retrieval Task'):
     parser.add_argument("--do_pretrain", action='store_true', help="Whether to run training.")
     parser.add_argument("--do_train", action='store_true', help="Whether to run training.")
     parser.add_argument("--do_eval", action='store_true', help="Whether to run eval on the dev set.")
+    parser.add_argument("--do_rerank_learn", action='store_true', help="Whether to learn best rerank parameters on the dev set.")
 
     parser.add_argument('--train_csv', type=str, default='data/.train.csv', help='')
     parser.add_argument('--val_csv', type=str, default='data/.val.csv', help='')
@@ -49,6 +51,12 @@ def get_args(description='PAU on Retrieval Task'):
     parser.add_argument('--hard_negative_rate', type=float, default=0.5, help='rate of intra negative sample')
     parser.add_argument('--negative_weighting', type=int, default=1, help='Weight the loss for intra negative')
     parser.add_argument('--n_pair', type=int, default=1, help='Num of pair to output from data loader')
+
+    # rerank learning parameters
+    parser.add_argument('--max_interations', type=int, default=20, help='Max interation times while learning best beta parameters in the rerank process.') 
+    parser.add_argument('--start_point_range', type=float, default=0.01, help='The start of the range in the rerank learning.')   
+    parser.add_argument('--end_point_range', type=float, default=1.01, help='The end of the range in the rerank learning.')
+    parser.add_argument('--step_length', type=float, default=0.01, help='The step of each point gap in the rerank learning.')
 
     parser.add_argument("--output_dir", default=None, type=str, required=True,
                         help="The output directory where the model predictions and checkpoints will be written.")
@@ -421,8 +429,28 @@ def eval_epoch(args, model, test_dataloader, device, n_gpu, epoch=100):
         sim_matrix, ret = _run_on_single_gpu(model, batch_list_t, batch_list_v, batch_sequence_output_list, batch_seq_features_list, batch_visual_output_list)
         sim_matrix = np.concatenate(tuple(sim_matrix), axis=0)
 
-        # simple re-rank
-        sim_matrix = np.exp(-args.rerank_coe_v * ret['vu_vector'].T) * np.exp(-args.rerank_coe_t * ret['tu_vector']) * sim_matrix
+        def objective_function(params):
+            beta_1, beta_2 = params
+            transformed_matrix = np.exp(-beta_1 * ret['vu_vector'].T) * np.exp(-beta_2 * ret['tu_vector']) * sim_matrix
+
+            count_rank_1_row = sum(np.argmax(transformed_matrix, axis=0) == np.arange(transformed_matrix.shape[0]))
+            count_rank_1_col = sum(np.argmax(transformed_matrix, axis=1) == np.arange(transformed_matrix.shape[0]))
+            count_rank_1 = (count_rank_1_row + count_rank_1_col) / 2
+            return -count_rank_1
+        
+        # learn the best beta
+        if args.do_rerank_learn:
+            initial_points = [(x, y) for x in np.arange(args.start_point_range, args.end_point_range, args.step_length) for y in np.arange(args.start_point_range, args.end_point_range, args.step_length)]
+            results = [minimize(objective_function, x0, method='Nelder-Mead', options={'maxiter': args.max_interations}) for x0 in initial_points]
+            best_solution = min(results, key=lambda x: x.fun)
+            print(f"Optimized Beta_1: {best_solution.x[0]}")
+            print(f"Optimized Beta_2: {best_solution.x[1]}")
+
+            sim_matrix = np.exp(-best_solution.x[0] * ret['vu_vector'].T) * np.exp(-best_solution.x[1] * ret['tu_vector']) * sim_matrix
+
+        else:
+            # simple re-rank using arg parameters directly
+            sim_matrix = np.exp(-args.rerank_coe_v * ret['vu_vector'].T) * np.exp(-args.rerank_coe_t * ret['tu_vector']) * sim_matrix
 
     if multi_sentence_:
         logger.info("before reshape, sim matrix size: {} x {}".format(sim_matrix.shape[0], sim_matrix.shape[1]))
@@ -575,7 +603,11 @@ def main():
 
     elif args.do_eval:
         if args.local_rank == 0:
-            eval_epoch(args, model, test_dataloader, device, n_gpu)
+            if args.do_rerank_learn:
+                eval_epoch(args, model, val_dataloader, device, n_gpu)
+
+            else:
+                eval_epoch(args, model, test_dataloader, device, n_gpu)
 
 if __name__ == "__main__":
     main()

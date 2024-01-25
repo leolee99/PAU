@@ -1,0 +1,603 @@
+01/24/2024 19:04:37 - INFO -   Effective parameters:
+01/24/2024 19:04:37 - INFO -     <<< K: 8
+01/24/2024 19:04:37 - INFO -     <<< batch_size: 256
+01/24/2024 19:04:37 - INFO -     <<< batch_size_val: 40
+01/24/2024 19:04:37 - INFO -     <<< cache_dir: 
+01/24/2024 19:04:37 - INFO -     <<< coef_lr: 0.001
+01/24/2024 19:04:37 - INFO -     <<< cross_model: cross-base
+01/24/2024 19:04:37 - INFO -   device: cuda:3 n_gpu: 4
+01/24/2024 19:04:37 - INFO -   device: cuda:1 n_gpu: 4
+01/24/2024 19:04:37 - INFO -     <<< cross_num_hidden_layers: 4
+01/24/2024 19:04:37 - INFO -     <<< data_path: ../data/VR_Dataset/MSRVTT/msrvtt_data/MSRVTT_data.json
+01/24/2024 19:04:37 - INFO -     <<< datatype: msrvtt
+01/24/2024 19:04:37 - INFO -     <<< do_eval: False
+01/24/2024 19:04:37 - INFO -     <<< do_lower_case: False
+01/24/2024 19:04:37 - INFO -     <<< do_pretrain: False
+01/24/2024 19:04:37 - INFO -     <<< do_rerank_learn: True
+01/24/2024 19:04:37 - INFO -     <<< do_train: True
+01/24/2024 19:04:37 - INFO -     <<< end_point_range: 1.01
+01/24/2024 19:04:37 - INFO -     <<< epochs: 5
+01/24/2024 19:04:37 - INFO -     <<< eval_frame_order: 0
+01/24/2024 19:04:37 - INFO -     <<< expand_msrvtt_sentences: True
+01/24/2024 19:04:37 - INFO -     <<< feature_framerate: 1
+01/24/2024 19:04:37 - INFO -     <<< features_path: ../data/VR_Dataset/MSRVTT/videos/all
+01/24/2024 19:04:37 - INFO -     <<< fp16: False
+01/24/2024 19:04:37 - INFO -     <<< fp16_opt_level: O1
+01/24/2024 19:04:37 - INFO -     <<< freeze_layer_num: 0
+01/24/2024 19:04:37 - INFO -     <<< gradient_accumulation_steps: 1
+01/24/2024 19:04:37 - INFO -     <<< hard_negative_rate: 0.5
+01/24/2024 19:04:37 - INFO -     <<< init_model: None
+01/24/2024 19:04:37 - INFO -     <<< lambda1: 1.0
+01/24/2024 19:04:37 - INFO -     <<< lambda2: 100.0
+01/24/2024 19:04:37 - INFO -     <<< lambda3: 0.025
+01/24/2024 19:04:37 - INFO -     <<< linear_patch: 2d
+01/24/2024 19:04:37 - INFO -     <<< local_rank: 0
+01/24/2024 19:04:37 - INFO -     <<< loose_type: True
+01/24/2024 19:04:37 - INFO -     <<< lr: 0.0001
+01/24/2024 19:04:37 - INFO -     <<< lr_decay: 0.9
+01/24/2024 19:04:37 - INFO -     <<< margin: 0.1
+01/24/2024 19:04:37 - INFO -     <<< max_frames: 12
+01/24/2024 19:04:37 - INFO -     <<< max_interations: 20
+01/24/2024 19:04:37 - INFO -     <<< max_words: 32
+01/24/2024 19:04:37 - INFO -     <<< n_display: 10
+01/24/2024 19:04:37 - INFO -     <<< n_gpu: 1
+01/24/2024 19:04:37 - INFO -     <<< n_pair: 1
+01/24/2024 19:04:37 - INFO -     <<< negative_weighting: 1
+01/24/2024 19:04:37 - INFO -     <<< num_thread_reader: 10
+01/24/2024 19:04:37 - INFO -     <<< output_dir: log
+01/24/2024 19:04:37 - INFO -     <<< precision: fp16
+01/24/2024 19:04:37 - INFO -     <<< pretrained_clip_name: ViT-B/32
+01/24/2024 19:04:37 - INFO -     <<< rank: 0
+01/24/2024 19:04:37 - INFO -     <<< rerank_coe_t: 0.05
+01/24/2024 19:04:37 - INFO -     <<< rerank_coe_v: 0.05
+01/24/2024 19:04:37 - INFO -     <<< resume_opt: None
+01/24/2024 19:04:37 - INFO -     <<< sampled_use_mil: False
+01/24/2024 19:04:37 - INFO -     <<< seed: 42
+01/24/2024 19:04:37 - INFO -     <<< sim_header: seqTransf
+01/24/2024 19:04:37 - INFO -     <<< slice_framepos: 2
+01/24/2024 19:04:37 - INFO -     <<< start_point_range: 0.01
+01/24/2024 19:04:37 - INFO -     <<< step_length: 0.01
+01/24/2024 19:04:37 - INFO -     <<< task_type: retrieval
+01/24/2024 19:04:37 - INFO -     <<< tau: 5
+01/24/2024 19:04:37 - INFO -     <<< text_num_hidden_layers: 12
+01/24/2024 19:04:37 - INFO -     <<< train_csv: ../data/VR_Dataset/MSRVTT/msrvtt_data/MSRVTT_train.9k.csv
+01/24/2024 19:04:37 - INFO -     <<< train_frame_order: 0
+01/24/2024 19:04:37 - INFO -     <<< use_mil: False
+01/24/2024 19:04:37 - INFO -     <<< val_csv: ../data/VR_Dataset/MSRVTT/msrvtt_data/MSRVTT_JSFUSION_test.csv
+01/24/2024 19:04:37 - INFO -     <<< video_dim: 1024
+01/24/2024 19:04:37 - INFO -     <<< visual_num_hidden_layers: 12
+01/24/2024 19:04:37 - INFO -     <<< warmup_proportion: 0.1
+01/24/2024 19:04:37 - INFO -     <<< world_size: 4
+01/24/2024 19:04:37 - INFO -   device: cuda:0 n_gpu: 4
+01/24/2024 19:04:37 - INFO -   device: cuda:2 n_gpu: 4
+01/24/2024 19:04:39 - INFO -   loading archive file /home/lihao/PAU/modules/cross-base
+01/24/2024 19:04:39 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+01/24/2024 19:04:39 - INFO -   Weight doesn't exsits. /home/lihao/PAU/modules/cross-base/cross_pytorch_model.bin
+01/24/2024 19:04:39 - WARNING -   Stage-One:True, Stage-Two:False
+01/24/2024 19:04:39 - WARNING -   Test retrieval by loose type.
+01/24/2024 19:04:39 - WARNING -   	 embed_dim: 512
+01/24/2024 19:04:39 - WARNING -   	 image_resolution: 224
+01/24/2024 19:04:39 - WARNING -   	 vision_layers: 12
+01/24/2024 19:04:39 - WARNING -   	 vision_width: 768
+01/24/2024 19:04:39 - WARNING -   	 vision_patch_size: 32
+01/24/2024 19:04:39 - WARNING -   	 context_length: 77
+01/24/2024 19:04:39 - WARNING -   	 vocab_size: 49408
+01/24/2024 19:04:39 - WARNING -   	 transformer_width: 512
+01/24/2024 19:04:39 - WARNING -   	 transformer_heads: 8
+01/24/2024 19:04:39 - WARNING -   	 transformer_layers: 12
+01/24/2024 19:04:39 - WARNING -   		 linear_patch: 2d
+01/24/2024 19:04:39 - WARNING -   	 cut_top_layer: 0
+/home/lihao/miniconda3/envs/xclip/lib/python3.8/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+01/24/2024 19:04:41 - WARNING -   	 sim_header: seqTransf
+/home/lihao/miniconda3/envs/xclip/lib/python3.8/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+/home/lihao/miniconda3/envs/xclip/lib/python3.8/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+/home/lihao/miniconda3/envs/xclip/lib/python3.8/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+01/24/2024 19:04:50 - INFO -   --------------------
+01/24/2024 19:04:50 - INFO -   Weights of PAU not initialized from pretrained model: 
+   global_mat_weight
+   word_logit_weight
+   frame_logit_weight
+   local_mat_weight
+   frame_mat_weight
+   word_mat_weight
+   frame_mat_weight2
+   word_mat_weight2
+   v_prototype
+   t_prototype
+01/24/2024 19:04:50 - INFO -   Weights from pretrained model not used in PAU: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+01/24/2024 19:04:50 - INFO -   ***** Running test *****
+01/24/2024 19:04:50 - INFO -     Num examples = 1000
+01/24/2024 19:04:50 - INFO -     Batch size = 40
+01/24/2024 19:04:50 - INFO -     Num steps = 25
+01/24/2024 19:04:50 - INFO -   ***** Running val *****
+01/24/2024 19:04:50 - INFO -     Num examples = 1000
+01/24/2024 19:05:11 - INFO -   ***** Running training *****
+01/24/2024 19:05:11 - INFO -     Num examples = 180000
+01/24/2024 19:05:11 - INFO -     Batch size = 256
+01/24/2024 19:05:11 - INFO -     Num steps = 3515
+01/24/2024 19:06:35 - INFO -   Epoch: 1/5, Step: 10/703, Lr: 0.000000003-0.000002845, Loss: 3.496105, Sim_Loss: 2.344258, Uct_Loss: 0.420711, Div_loss: 0.731136, Time/step: 8.471628
+01/24/2024 19:07:35 - INFO -   Epoch: 1/5, Step: 20/703, Lr: 0.000000006-0.000005690, Loss: 3.484006, Sim_Loss: 2.315382, Uct_Loss: 0.457237, Div_loss: 0.711387, Time/step: 5.993687
+01/24/2024 19:08:46 - INFO -   Epoch: 1/5, Step: 30/703, Lr: 0.000000009-0.000008535, Loss: 3.265919, Sim_Loss: 2.250078, Uct_Loss: 0.337433, Div_loss: 0.678408, Time/step: 7.095061
+01/24/2024 19:09:47 - INFO -   Epoch: 1/5, Step: 40/703, Lr: 0.000000011-0.000011380, Loss: 2.871515, Sim_Loss: 1.940608, Uct_Loss: 0.296613, Div_loss: 0.634293, Time/step: 6.110586
+01/24/2024 19:10:48 - INFO -   Epoch: 1/5, Step: 50/703, Lr: 0.000000014-0.000014225, Loss: 2.764585, Sim_Loss: 1.987271, Uct_Loss: 0.195833, Div_loss: 0.581480, Time/step: 6.122827
+01/24/2024 19:11:50 - INFO -   Epoch: 1/5, Step: 60/703, Lr: 0.000000017-0.000017070, Loss: 2.381093, Sim_Loss: 1.718495, Uct_Loss: 0.139882, Div_loss: 0.522716, Time/step: 6.145415
+01/24/2024 19:12:47 - INFO -   Epoch: 1/5, Step: 70/703, Lr: 0.000000020-0.000019915, Loss: 2.392684, Sim_Loss: 1.782322, Uct_Loss: 0.150329, Div_loss: 0.460032, Time/step: 5.707002
+01/24/2024 19:13:47 - INFO -   Epoch: 1/5, Step: 80/703, Lr: 0.000000023-0.000022760, Loss: 2.311279, Sim_Loss: 1.797091, Uct_Loss: 0.118666, Div_loss: 0.395522, Time/step: 6.019246
+01/24/2024 19:14:45 - INFO -   Epoch: 1/5, Step: 90/703, Lr: 0.000000026-0.000025605, Loss: 2.022148, Sim_Loss: 1.583600, Uct_Loss: 0.106946, Div_loss: 0.331601, Time/step: 5.807650
+01/24/2024 19:15:55 - INFO -   Epoch: 1/5, Step: 100/703, Lr: 0.000000028-0.000028450, Loss: 1.981802, Sim_Loss: 1.605275, Uct_Loss: 0.106745, Div_loss: 0.269783, Time/step: 6.987300
+01/24/2024 19:16:43 - INFO -   Epoch: 1/5, Step: 110/703, Lr: 0.000000031-0.000031294, Loss: 2.024626, Sim_Loss: 1.728958, Uct_Loss: 0.084126, Div_loss: 0.211543, Time/step: 4.770649
+01/24/2024 19:18:05 - INFO -   Epoch: 1/5, Step: 120/703, Lr: 0.000000034-0.000034139, Loss: 1.670998, Sim_Loss: 1.437014, Uct_Loss: 0.074879, Div_loss: 0.159104, Time/step: 8.233990
+01/24/2024 19:19:42 - INFO -   Epoch: 1/5, Step: 130/703, Lr: 0.000000037-0.000036984, Loss: 1.503734, Sim_Loss: 1.314481, Uct_Loss: 0.075575, Div_loss: 0.113678, Time/step: 9.653956
+01/24/2024 19:21:25 - INFO -   Epoch: 1/5, Step: 140/703, Lr: 0.000000040-0.000039829, Loss: 1.805620, Sim_Loss: 1.663726, Uct_Loss: 0.065613, Div_loss: 0.076281, Time/step: 10.288613
+01/24/2024 19:22:16 - INFO -   Epoch: 1/5, Step: 150/703, Lr: 0.000000043-0.000042674, Loss: 1.444040, Sim_Loss: 1.336249, Uct_Loss: 0.060388, Div_loss: 0.047403, Time/step: 5.180945
+01/24/2024 19:24:14 - INFO -   Epoch: 1/5, Step: 160/703, Lr: 0.000000046-0.000045519, Loss: 1.556297, Sim_Loss: 1.474043, Uct_Loss: 0.055655, Div_loss: 0.026599, Time/step: 11.719584
+01/24/2024 19:25:33 - INFO -   Epoch: 1/5, Step: 170/703, Lr: 0.000000048-0.000048364, Loss: 1.622965, Sim_Loss: 1.558163, Uct_Loss: 0.051621, Div_loss: 0.013180, Time/step: 7.937433
+01/24/2024 19:26:43 - INFO -   Epoch: 1/5, Step: 180/703, Lr: 0.000000051-0.000051209, Loss: 1.419833, Sim_Loss: 1.365837, Uct_Loss: 0.048510, Div_loss: 0.005487, Time/step: 6.986077
+01/24/2024 19:27:45 - INFO -   Epoch: 1/5, Step: 190/703, Lr: 0.000000054-0.000054054, Loss: 1.430873, Sim_Loss: 1.371612, Uct_Loss: 0.057468, Div_loss: 0.001793, Time/step: 6.218075
+01/24/2024 19:28:46 - INFO -   Epoch: 1/5, Step: 200/703, Lr: 0.000000057-0.000056899, Loss: 1.368467, Sim_Loss: 1.325573, Uct_Loss: 0.042465, Div_loss: 0.000429, Time/step: 6.053627
+01/24/2024 19:30:00 - INFO -   Epoch: 1/5, Step: 210/703, Lr: 0.000000060-0.000059744, Loss: 1.345284, Sim_Loss: 1.303890, Uct_Loss: 0.041322, Div_loss: 0.000073, Time/step: 7.478162
+01/24/2024 19:31:10 - INFO -   Epoch: 1/5, Step: 220/703, Lr: 0.000000063-0.000062589, Loss: 1.296306, Sim_Loss: 1.256883, Uct_Loss: 0.039403, Div_loss: 0.000020, Time/step: 6.927439
+01/24/2024 19:31:55 - INFO -   Epoch: 1/5, Step: 230/703, Lr: 0.000000065-0.000065434, Loss: 1.222173, Sim_Loss: 1.177518, Uct_Loss: 0.044642, Div_loss: 0.000012, Time/step: 4.566141
+01/24/2024 19:33:19 - INFO -   Epoch: 1/5, Step: 240/703, Lr: 0.000000068-0.000068279, Loss: 1.313882, Sim_Loss: 1.275171, Uct_Loss: 0.038700, Div_loss: 0.000010, Time/step: 8.350475
+01/24/2024 19:34:25 - INFO -   Epoch: 1/5, Step: 250/703, Lr: 0.000000071-0.000071124, Loss: 1.236151, Sim_Loss: 1.206673, Uct_Loss: 0.029471, Div_loss: 0.000006, Time/step: 6.607613
+01/24/2024 19:35:34 - INFO -   Epoch: 1/5, Step: 260/703, Lr: 0.000000074-0.000073969, Loss: 1.204527, Sim_Loss: 1.164124, Uct_Loss: 0.040400, Div_loss: 0.000003, Time/step: 6.916033
+01/24/2024 19:37:23 - INFO -   Epoch: 1/5, Step: 270/703, Lr: 0.000000077-0.000076814, Loss: 1.162424, Sim_Loss: 1.117811, Uct_Loss: 0.044607, Div_loss: 0.000006, Time/step: 10.852685
+01/24/2024 19:39:09 - INFO -   Epoch: 1/5, Step: 280/703, Lr: 0.000000080-0.000079659, Loss: 1.348794, Sim_Loss: 1.310370, Uct_Loss: 0.038420, Div_loss: 0.000004, Time/step: 10.621531
+01/24/2024 19:40:13 - INFO -   Epoch: 1/5, Step: 290/703, Lr: 0.000000083-0.000082504, Loss: 1.351976, Sim_Loss: 1.314372, Uct_Loss: 0.037599, Div_loss: 0.000004, Time/step: 6.438150
+01/24/2024 19:41:47 - INFO -   Epoch: 1/5, Step: 300/703, Lr: 0.000000085-0.000085349, Loss: 1.108460, Sim_Loss: 1.076601, Uct_Loss: 0.031856, Div_loss: 0.000003, Time/step: 9.335659
+01/24/2024 19:42:42 - INFO -   Epoch: 1/5, Step: 310/703, Lr: 0.000000088-0.000088193, Loss: 1.149030, Sim_Loss: 1.115997, Uct_Loss: 0.033030, Div_loss: 0.000003, Time/step: 5.499116
+01/24/2024 19:44:59 - INFO -   Epoch: 1/5, Step: 320/703, Lr: 0.000000091-0.000091038, Loss: 1.183474, Sim_Loss: 1.146989, Uct_Loss: 0.036481, Div_loss: 0.000004, Time/step: 13.724762
+01/24/2024 19:46:43 - INFO -   Epoch: 1/5, Step: 330/703, Lr: 0.000000094-0.000093883, Loss: 1.325159, Sim_Loss: 1.290112, Uct_Loss: 0.035043, Div_loss: 0.000004, Time/step: 10.457752
+01/24/2024 19:47:59 - INFO -   Epoch: 1/5, Step: 340/703, Lr: 0.000000097-0.000096728, Loss: 1.228646, Sim_Loss: 1.196426, Uct_Loss: 0.032214, Div_loss: 0.000006, Time/step: 7.542893
+01/24/2024 19:49:20 - INFO -   Epoch: 1/5, Step: 350/703, Lr: 0.000000100-0.000099573, Loss: 1.252521, Sim_Loss: 1.228075, Uct_Loss: 0.024442, Div_loss: 0.000004, Time/step: 8.143246
+01/24/2024 19:50:51 - INFO -   Epoch: 1/5, Step: 360/703, Lr: 0.000000097-0.000097434, Loss: 1.206057, Sim_Loss: 1.174066, Uct_Loss: 0.031987, Div_loss: 0.000004, Time/step: 9.032460
+01/24/2024 19:52:00 - INFO -   Epoch: 1/5, Step: 370/703, Lr: 0.000000097-0.000097291, Loss: 1.055701, Sim_Loss: 1.023658, Uct_Loss: 0.032039, Div_loss: 0.000004, Time/step: 6.962649
+01/24/2024 19:52:59 - INFO -   Epoch: 1/5, Step: 380/703, Lr: 0.000000097-0.000097144, Loss: 1.097497, Sim_Loss: 1.067855, Uct_Loss: 0.029636, Div_loss: 0.000005, Time/step: 5.887838
+01/24/2024 19:54:17 - INFO -   Epoch: 1/5, Step: 390/703, Lr: 0.000000097-0.000096993, Loss: 0.867271, Sim_Loss: 0.838609, Uct_Loss: 0.028658, Div_loss: 0.000004, Time/step: 7.791716
+01/24/2024 19:55:59 - INFO -   Epoch: 1/5, Step: 400/703, Lr: 0.000000097-0.000096839, Loss: 1.064125, Sim_Loss: 1.034932, Uct_Loss: 0.029186, Div_loss: 0.000008, Time/step: 10.161788
+01/24/2024 19:57:44 - INFO -   Epoch: 1/5, Step: 410/703, Lr: 0.000000097-0.000096680, Loss: 1.247130, Sim_Loss: 1.223956, Uct_Loss: 0.023170, Div_loss: 0.000005, Time/step: 10.533243
+01/24/2024 19:58:56 - INFO -   Epoch: 1/5, Step: 420/703, Lr: 0.000000097-0.000096518, Loss: 1.296960, Sim_Loss: 1.269564, Uct_Loss: 0.027388, Div_loss: 0.000007, Time/step: 7.162987
+01/24/2024 20:00:36 - INFO -   Epoch: 1/5, Step: 430/703, Lr: 0.000000096-0.000096353, Loss: 0.976267, Sim_Loss: 0.946740, Uct_Loss: 0.029521, Div_loss: 0.000006, Time/step: 9.997737
+01/24/2024 20:01:40 - INFO -   Epoch: 1/5, Step: 440/703, Lr: 0.000000096-0.000096183, Loss: 1.184272, Sim_Loss: 1.158967, Uct_Loss: 0.025300, Div_loss: 0.000005, Time/step: 6.467817
+01/24/2024 20:02:47 - INFO -   Epoch: 1/5, Step: 450/703, Lr: 0.000000096-0.000096010, Loss: 1.320920, Sim_Loss: 1.299779, Uct_Loss: 0.021135, Div_loss: 0.000007, Time/step: 6.652548
+01/24/2024 20:05:23 - INFO -   Epoch: 1/5, Step: 460/703, Lr: 0.000000096-0.000095833, Loss: 1.200998, Sim_Loss: 1.178028, Uct_Loss: 0.022969, Div_loss: 0.000002, Time/step: 15.674961
+01/24/2024 20:06:44 - INFO -   Epoch: 1/5, Step: 470/703, Lr: 0.000000096-0.000095653, Loss: 1.162493, Sim_Loss: 1.137671, Uct_Loss: 0.024818, Div_loss: 0.000004, Time/step: 8.037175
+01/24/2024 20:08:15 - INFO -   Epoch: 1/5, Step: 480/703, Lr: 0.000000095-0.000095469, Loss: 1.085682, Sim_Loss: 1.062526, Uct_Loss: 0.023150, Div_loss: 0.000006, Time/step: 9.069695
+01/24/2024 20:09:37 - INFO -   Epoch: 1/5, Step: 490/703, Lr: 0.000000095-0.000095281, Loss: 1.203954, Sim_Loss: 1.183728, Uct_Loss: 0.020218, Div_loss: 0.000007, Time/step: 8.261654
+01/24/2024 20:11:32 - INFO -   Epoch: 1/5, Step: 500/703, Lr: 0.000000095-0.000095090, Loss: 1.168736, Sim_Loss: 1.148246, Uct_Loss: 0.020485, Div_loss: 0.000004, Time/step: 11.524336
+01/24/2024 20:13:32 - INFO -   Epoch: 1/5, Step: 510/703, Lr: 0.000000095-0.000094895, Loss: 1.194459, Sim_Loss: 1.174555, Uct_Loss: 0.019898, Div_loss: 0.000006, Time/step: 11.911061
+01/24/2024 20:16:27 - INFO -   Epoch: 1/5, Step: 520/703, Lr: 0.000000095-0.000094696, Loss: 1.006843, Sim_Loss: 0.988587, Uct_Loss: 0.018248, Div_loss: 0.000007, Time/step: 17.524280
+01/24/2024 20:19:19 - INFO -   Epoch: 1/5, Step: 530/703, Lr: 0.000000094-0.000094494, Loss: 1.071212, Sim_Loss: 1.050536, Uct_Loss: 0.020673, Div_loss: 0.000003, Time/step: 17.189103
+01/24/2024 20:20:34 - INFO -   Epoch: 1/5, Step: 540/703, Lr: 0.000000094-0.000094289, Loss: 1.118349, Sim_Loss: 1.094477, Uct_Loss: 0.023868, Div_loss: 0.000004, Time/step: 7.558885
+01/24/2024 20:21:15 - INFO -   Epoch: 1/5, Step: 550/703, Lr: 0.000000094-0.000094080, Loss: 1.031812, Sim_Loss: 1.010906, Uct_Loss: 0.020904, Div_loss: 0.000002, Time/step: 4.101044
+01/24/2024 20:23:25 - INFO -   Epoch: 1/5, Step: 560/703, Lr: 0.000000094-0.000093867, Loss: 1.025635, Sim_Loss: 1.006716, Uct_Loss: 0.018916, Div_loss: 0.000004, Time/step: 13.015478
+01/24/2024 20:25:28 - INFO -   Epoch: 1/5, Step: 570/703, Lr: 0.000000094-0.000093651, Loss: 0.955214, Sim_Loss: 0.931091, Uct_Loss: 0.024120, Div_loss: 0.000003, Time/step: 12.252951
+01/24/2024 20:26:46 - INFO -   Epoch: 1/5, Step: 580/703, Lr: 0.000000093-0.000093431, Loss: 1.216736, Sim_Loss: 1.195934, Uct_Loss: 0.020799, Div_loss: 0.000003, Time/step: 7.781508
+01/24/2024 20:28:15 - INFO -   Epoch: 1/5, Step: 590/703, Lr: 0.000000093-0.000093208, Loss: 1.092262, Sim_Loss: 1.074730, Uct_Loss: 0.017526, Div_loss: 0.000006, Time/step: 8.955661
+01/24/2024 20:30:32 - INFO -   Epoch: 1/5, Step: 600/703, Lr: 0.000000093-0.000092981, Loss: 0.982742, Sim_Loss: 0.961665, Uct_Loss: 0.021064, Div_loss: 0.000014, Time/step: 13.657871
+01/24/2024 20:31:37 - INFO -   Epoch: 1/5, Step: 610/703, Lr: 0.000000093-0.000092751, Loss: 1.418677, Sim_Loss: 1.400301, Uct_Loss: 0.018370, Div_loss: 0.000006, Time/step: 6.534971
+01/24/2024 20:32:49 - INFO -   Epoch: 1/5, Step: 620/703, Lr: 0.000000093-0.000092518, Loss: 0.927346, Sim_Loss: 0.911509, Uct_Loss: 0.015833, Div_loss: 0.000004, Time/step: 7.184112
+01/24/2024 20:35:35 - INFO -   Epoch: 1/5, Step: 630/703, Lr: 0.000000092-0.000092281, Loss: 1.015728, Sim_Loss: 0.995287, Uct_Loss: 0.020436, Div_loss: 0.000005, Time/step: 16.599175
+01/24/2024 20:36:36 - INFO -   Epoch: 1/5, Step: 640/703, Lr: 0.000000092-0.000092041, Loss: 1.005537, Sim_Loss: 0.983546, Uct_Loss: 0.021984, Div_loss: 0.000007, Time/step: 6.115399
+01/24/2024 20:37:44 - INFO -   Epoch: 1/5, Step: 650/703, Lr: 0.000000092-0.000091797, Loss: 0.982655, Sim_Loss: 0.964644, Uct_Loss: 0.017999, Div_loss: 0.000012, Time/step: 6.814914
+01/24/2024 20:38:45 - INFO -   Epoch: 1/5, Step: 660/703, Lr: 0.000000092-0.000091550, Loss: 1.120435, Sim_Loss: 1.103975, Uct_Loss: 0.016456, Div_loss: 0.000004, Time/step: 6.013282
+01/24/2024 20:41:43 - INFO -   Epoch: 1/5, Step: 670/703, Lr: 0.000000091-0.000091300, Loss: 0.949711, Sim_Loss: 0.931065, Uct_Loss: 0.018639, Div_loss: 0.000007, Time/step: 17.815855
+01/24/2024 20:42:36 - INFO -   Epoch: 1/5, Step: 680/703, Lr: 0.000000091-0.000091046, Loss: 0.987073, Sim_Loss: 0.971191, Uct_Loss: 0.015877, Div_loss: 0.000004, Time/step: 5.285563
+01/24/2024 20:43:19 - INFO -   Epoch: 1/5, Step: 690/703, Lr: 0.000000091-0.000090790, Loss: 1.136105, Sim_Loss: 1.118855, Uct_Loss: 0.017247, Div_loss: 0.000004, Time/step: 4.368669
+01/24/2024 20:44:07 - INFO -   Epoch: 1/5, Step: 700/703, Lr: 0.000000091-0.000090530, Loss: 0.886742, Sim_Loss: 0.869664, Uct_Loss: 0.017076, Div_loss: 0.000003, Time/step: 4.771998
+01/24/2024 20:44:19 - INFO -   Epoch 1/5 Finished, Train Loss: 1.453576
+01/24/2024 20:44:22 - INFO -   Model saved to log/pytorch_model.bin.0
+01/24/2024 20:44:22 - INFO -   Optimizer saved to log/pytorch_opt.bin.0
+01/24/2024 20:44:22 - INFO -   Eval on val dataset
+0/251/252/253/254/255/256/257/258/259/2510/2511/2512/2513/2514/2515/2516/2517/2518/2519/2520/2521/2522/2523/2524/25Optimized Beta_1: 0.036609375
+Optimized Beta_2: 0.42293749999999974
+01/24/2024 21:06:07 - INFO -   sim matrix size: 1000, 1000
+01/24/2024 21:06:07 - INFO -   	 Length-T: 1000, Length-V:1000
+01/24/2024 21:06:07 - INFO -   Text-to-Video:
+01/24/2024 21:06:07 - INFO -   	>>>  R@1: 46.5 - R@5: 72.6 - R@10: 82.8 - Median R: 2.0 - Mean R: 14.1
+01/24/2024 21:06:07 - INFO -   Video-to-Text:
+01/24/2024 21:06:07 - INFO -   	>>>  V2T$R@1: 46.2 - V2T$R@5: 71.6 - V2T$R@10: 82.3 - V2T$Median R: 2.0 - V2T$Mean R: 10.4
+01/24/2024 21:06:07 - INFO -   The best model is: log/pytorch_model.bin.0, the R1 is: 46.5000
+01/24/2024 21:07:08 - INFO -   Epoch: 2/5, Step: 7/703, Lr: 0.000000090-0.000090266, Loss: 0.721105, Sim_Loss: 0.707323, Uct_Loss: 0.013779, Div_loss: 0.000003, Time/step: 6.083785
+01/24/2024 21:08:54 - INFO -   Epoch: 2/5, Step: 17/703, Lr: 0.000000090-0.000090000, Loss: 0.810359, Sim_Loss: 0.784239, Uct_Loss: 0.026115, Div_loss: 0.000005, Time/step: 10.640815
+01/24/2024 21:09:52 - INFO -   Epoch: 2/5, Step: 27/703, Lr: 0.000000090-0.000089730, Loss: 0.738340, Sim_Loss: 0.717135, Uct_Loss: 0.021200, Div_loss: 0.000006, Time/step: 5.826257
+01/24/2024 21:11:36 - INFO -   Epoch: 2/5, Step: 37/703, Lr: 0.000000089-0.000089457, Loss: 0.791983, Sim_Loss: 0.774503, Uct_Loss: 0.017473, Div_loss: 0.000007, Time/step: 10.357489
+01/24/2024 21:13:20 - INFO -   Epoch: 2/5, Step: 47/703, Lr: 0.000000089-0.000089181, Loss: 1.083598, Sim_Loss: 1.062057, Uct_Loss: 0.021538, Div_loss: 0.000004, Time/step: 10.351235
+01/24/2024 21:14:13 - INFO -   Epoch: 2/5, Step: 57/703, Lr: 0.000000089-0.000088902, Loss: 1.016828, Sim_Loss: 0.998593, Uct_Loss: 0.018229, Div_loss: 0.000006, Time/step: 5.385242
+01/24/2024 21:15:22 - INFO -   Epoch: 2/5, Step: 67/703, Lr: 0.000000089-0.000088619, Loss: 0.849829, Sim_Loss: 0.831020, Uct_Loss: 0.018805, Div_loss: 0.000004, Time/step: 6.850605
+01/24/2024 21:16:25 - INFO -   Epoch: 2/5, Step: 77/703, Lr: 0.000000088-0.000088334, Loss: 0.716567, Sim_Loss: 0.698031, Uct_Loss: 0.018530, Div_loss: 0.000006, Time/step: 6.313322
+01/24/2024 21:18:32 - INFO -   Epoch: 2/5, Step: 87/703, Lr: 0.000000088-0.000088046, Loss: 0.919518, Sim_Loss: 0.901226, Uct_Loss: 0.018289, Div_loss: 0.000003, Time/step: 12.742834
+01/24/2024 21:20:24 - INFO -   Epoch: 2/5, Step: 97/703, Lr: 0.000000088-0.000087754, Loss: 0.750548, Sim_Loss: 0.732530, Uct_Loss: 0.018013, Div_loss: 0.000006, Time/step: 11.169311
+01/24/2024 21:21:53 - INFO -   Epoch: 2/5, Step: 107/703, Lr: 0.000000087-0.000087460, Loss: 0.912840, Sim_Loss: 0.891622, Uct_Loss: 0.021213, Div_loss: 0.000005, Time/step: 8.868335
+01/24/2024 21:23:35 - INFO -   Epoch: 2/5, Step: 117/703, Lr: 0.000000087-0.000087162, Loss: 0.916123, Sim_Loss: 0.899431, Uct_Loss: 0.016690, Div_loss: 0.000002, Time/step: 10.173207
+01/24/2024 21:25:27 - INFO -   Epoch: 2/5, Step: 127/703, Lr: 0.000000087-0.000086862, Loss: 0.849941, Sim_Loss: 0.833438, Uct_Loss: 0.016497, Div_loss: 0.000005, Time/step: 11.274298
+01/24/2024 21:26:22 - INFO -   Epoch: 2/5, Step: 137/703, Lr: 0.000000087-0.000086558, Loss: 0.998480, Sim_Loss: 0.982651, Uct_Loss: 0.015827, Div_loss: 0.000002, Time/step: 5.444390
+01/24/2024 21:27:30 - INFO -   Epoch: 2/5, Step: 147/703, Lr: 0.000000086-0.000086252, Loss: 0.844280, Sim_Loss: 0.824916, Uct_Loss: 0.019361, Div_loss: 0.000002, Time/step: 6.872615
+01/24/2024 21:29:22 - INFO -   Epoch: 2/5, Step: 157/703, Lr: 0.000000086-0.000085943, Loss: 0.764416, Sim_Loss: 0.747527, Uct_Loss: 0.016885, Div_loss: 0.000004, Time/step: 11.147363
+01/24/2024 21:31:12 - INFO -   Epoch: 2/5, Step: 167/703, Lr: 0.000000086-0.000085631, Loss: 0.803134, Sim_Loss: 0.784345, Uct_Loss: 0.018786, Div_loss: 0.000003, Time/step: 10.958671
+01/24/2024 21:33:10 - INFO -   Epoch: 2/5, Step: 177/703, Lr: 0.000000085-0.000085316, Loss: 1.000618, Sim_Loss: 0.977189, Uct_Loss: 0.023425, Div_loss: 0.000003, Time/step: 11.873584
+01/24/2024 21:35:36 - INFO -   Epoch: 2/5, Step: 187/703, Lr: 0.000000085-0.000084998, Loss: 0.732571, Sim_Loss: 0.710985, Uct_Loss: 0.021581, Div_loss: 0.000005, Time/step: 14.607867
+01/24/2024 21:37:33 - INFO -   Epoch: 2/5, Step: 197/703, Lr: 0.000000085-0.000084678, Loss: 0.958864, Sim_Loss: 0.943010, Uct_Loss: 0.015850, Div_loss: 0.000004, Time/step: 11.675572
+01/24/2024 21:39:32 - INFO -   Epoch: 2/5, Step: 207/703, Lr: 0.000000084-0.000084354, Loss: 0.970912, Sim_Loss: 0.953495, Uct_Loss: 0.017414, Div_loss: 0.000002, Time/step: 11.930892
+01/24/2024 21:42:47 - INFO -   Epoch: 2/5, Step: 217/703, Lr: 0.000000084-0.000084028, Loss: 0.821765, Sim_Loss: 0.800735, Uct_Loss: 0.021023, Div_loss: 0.000006, Time/step: 19.455953
+01/24/2024 21:44:56 - INFO -   Epoch: 2/5, Step: 227/703, Lr: 0.000000084-0.000083699, Loss: 0.781647, Sim_Loss: 0.765602, Uct_Loss: 0.016037, Div_loss: 0.000008, Time/step: 12.893855
+01/24/2024 21:49:03 - INFO -   Epoch: 2/5, Step: 237/703, Lr: 0.000000083-0.000083368, Loss: 0.730446, Sim_Loss: 0.714411, Uct_Loss: 0.016031, Div_loss: 0.000004, Time/step: 24.674380
+01/24/2024 21:51:54 - INFO -   Epoch: 2/5, Step: 247/703, Lr: 0.000000083-0.000083034, Loss: 0.897770, Sim_Loss: 0.886065, Uct_Loss: 0.011701, Div_loss: 0.000004, Time/step: 17.161933
+01/24/2024 21:56:37 - INFO -   Epoch: 2/5, Step: 257/703, Lr: 0.000000083-0.000082697, Loss: 0.885393, Sim_Loss: 0.869280, Uct_Loss: 0.016109, Div_loss: 0.000004, Time/step: 28.248437
+01/24/2024 22:00:23 - INFO -   Epoch: 2/5, Step: 267/703, Lr: 0.000000082-0.000082358, Loss: 0.882051, Sim_Loss: 0.865383, Uct_Loss: 0.016667, Div_loss: 0.000001, Time/step: 22.654444
+01/24/2024 22:02:59 - INFO -   Epoch: 2/5, Step: 277/703, Lr: 0.000000082-0.000082016, Loss: 0.761374, Sim_Loss: 0.743763, Uct_Loss: 0.017610, Div_loss: 0.000001, Time/step: 15.587656
+01/24/2024 22:03:59 - INFO -   Epoch: 2/5, Step: 287/703, Lr: 0.000000082-0.000081671, Loss: 0.835784, Sim_Loss: 0.815770, Uct_Loss: 0.020012, Div_loss: 0.000002, Time/step: 5.974675
+01/24/2024 22:07:09 - INFO -   Epoch: 2/5, Step: 297/703, Lr: 0.000000081-0.000081324, Loss: 0.948485, Sim_Loss: 0.925901, Uct_Loss: 0.022579, Div_loss: 0.000005, Time/step: 18.980886
+01/24/2024 22:07:29 - INFO -   Epoch: 2/5, Step: 307/703, Lr: 0.000000081-0.000080974, Loss: 0.792304, Sim_Loss: 0.777621, Uct_Loss: 0.014678, Div_loss: 0.000005, Time/step: 1.995010
+01/24/2024 22:10:37 - INFO -   Epoch: 2/5, Step: 317/703, Lr: 0.000000081-0.000080622, Loss: 0.706650, Sim_Loss: 0.689803, Uct_Loss: 0.016842, Div_loss: 0.000006, Time/step: 18.817052
+01/24/2024 22:12:12 - INFO -   Epoch: 2/5, Step: 327/703, Lr: 0.000000080-0.000080268, Loss: 0.845916, Sim_Loss: 0.831488, Uct_Loss: 0.014426, Div_loss: 0.000002, Time/step: 9.551705
+01/24/2024 22:13:43 - INFO -   Epoch: 2/5, Step: 337/703, Lr: 0.000000080-0.000079911, Loss: 0.706736, Sim_Loss: 0.690876, Uct_Loss: 0.015854, Div_loss: 0.000006, Time/step: 9.076090
+01/24/2024 22:18:09 - INFO -   Epoch: 2/5, Step: 347/703, Lr: 0.000000080-0.000079552, Loss: 0.881760, Sim_Loss: 0.868034, Uct_Loss: 0.013722, Div_loss: 0.000004, Time/step: 26.624180
+01/24/2024 22:18:35 - INFO -   Epoch: 2/5, Step: 357/703, Lr: 0.000000079-0.000079190, Loss: 0.768413, Sim_Loss: 0.754535, Uct_Loss: 0.013872, Div_loss: 0.000006, Time/step: 2.607986
+01/24/2024 22:20:32 - INFO -   Epoch: 2/5, Step: 367/703, Lr: 0.000000079-0.000078826, Loss: 0.746551, Sim_Loss: 0.733035, Uct_Loss: 0.013513, Div_loss: 0.000003, Time/step: 11.642170
+01/24/2024 22:21:45 - INFO -   Epoch: 2/5, Step: 377/703, Lr: 0.000000078-0.000078460, Loss: 0.874026, Sim_Loss: 0.858070, Uct_Loss: 0.015953, Div_loss: 0.000003, Time/step: 7.318542
+01/24/2024 22:22:05 - INFO -   Epoch: 2/5, Step: 387/703, Lr: 0.000000078-0.000078091, Loss: 0.726758, Sim_Loss: 0.714186, Uct_Loss: 0.012569, Div_loss: 0.000003, Time/step: 1.967543
+01/24/2024 22:26:42 - INFO -   Epoch: 2/5, Step: 397/703, Lr: 0.000000078-0.000077720, Loss: 0.847086, Sim_Loss: 0.831237, Uct_Loss: 0.015844, Div_loss: 0.000005, Time/step: 27.676944
+01/24/2024 22:28:55 - INFO -   Epoch: 2/5, Step: 407/703, Lr: 0.000000077-0.000077347, Loss: 0.920912, Sim_Loss: 0.907025, Uct_Loss: 0.013884, Div_loss: 0.000004, Time/step: 13.367438
+01/24/2024 22:30:53 - INFO -   Epoch: 2/5, Step: 417/703, Lr: 0.000000077-0.000076972, Loss: 0.875736, Sim_Loss: 0.861933, Uct_Loss: 0.013799, Div_loss: 0.000003, Time/step: 11.756143
+01/24/2024 22:32:34 - INFO -   Epoch: 2/5, Step: 427/703, Lr: 0.000000077-0.000076595, Loss: 0.742826, Sim_Loss: 0.726881, Uct_Loss: 0.015942, Div_loss: 0.000002, Time/step: 10.157310
+01/24/2024 22:33:44 - INFO -   Epoch: 2/5, Step: 437/703, Lr: 0.000000076-0.000076215, Loss: 0.731331, Sim_Loss: 0.719015, Uct_Loss: 0.012314, Div_loss: 0.000002, Time/step: 6.997659
+01/24/2024 22:34:50 - INFO -   Epoch: 2/5, Step: 447/703, Lr: 0.000000076-0.000075834, Loss: 0.730331, Sim_Loss: 0.711343, Uct_Loss: 0.018985, Div_loss: 0.000003, Time/step: 6.523709
+01/24/2024 22:36:36 - INFO -   Epoch: 2/5, Step: 457/703, Lr: 0.000000075-0.000075450, Loss: 0.724029, Sim_Loss: 0.706163, Uct_Loss: 0.017862, Div_loss: 0.000004, Time/step: 10.645039
+01/24/2024 22:38:14 - INFO -   Epoch: 2/5, Step: 467/703, Lr: 0.000000075-0.000075064, Loss: 0.684840, Sim_Loss: 0.669867, Uct_Loss: 0.014970, Div_loss: 0.000003, Time/step: 9.778457
+01/24/2024 22:39:47 - INFO -   Epoch: 2/5, Step: 477/703, Lr: 0.000000075-0.000074677, Loss: 0.908651, Sim_Loss: 0.894270, Uct_Loss: 0.014380, Div_loss: 0.000001, Time/step: 9.366575
+01/24/2024 22:41:01 - INFO -   Epoch: 2/5, Step: 487/703, Lr: 0.000000074-0.000074287, Loss: 0.803352, Sim_Loss: 0.789071, Uct_Loss: 0.014279, Div_loss: 0.000002, Time/step: 7.391578
+01/24/2024 22:44:44 - INFO -   Epoch: 2/5, Step: 497/703, Lr: 0.000000074-0.000073896, Loss: 0.882886, Sim_Loss: 0.868582, Uct_Loss: 0.014301, Div_loss: 0.000003, Time/step: 22.238949
+01/24/2024 22:45:46 - INFO -   Epoch: 2/5, Step: 507/703, Lr: 0.000000074-0.000073502, Loss: 0.748070, Sim_Loss: 0.732095, Uct_Loss: 0.015970, Div_loss: 0.000004, Time/step: 6.213294
+01/24/2024 22:51:48 - INFO -   Epoch: 2/5, Step: 517/703, Lr: 0.000000073-0.000073107, Loss: 0.755017, Sim_Loss: 0.740088, Uct_Loss: 0.014928, Div_loss: 0.000002, Time/step: 36.182280
+01/24/2024 22:53:17 - INFO -   Epoch: 2/5, Step: 527/703, Lr: 0.000000073-0.000072709, Loss: 0.837439, Sim_Loss: 0.824416, Uct_Loss: 0.013022, Div_loss: 0.000002, Time/step: 8.898995
+01/24/2024 22:54:19 - INFO -   Epoch: 2/5, Step: 537/703, Lr: 0.000000072-0.000072310, Loss: 0.778172, Sim_Loss: 0.765292, Uct_Loss: 0.012877, Div_loss: 0.000003, Time/step: 6.275802
+01/24/2024 22:55:27 - INFO -   Epoch: 2/5, Step: 547/703, Lr: 0.000000072-0.000071910, Loss: 0.807951, Sim_Loss: 0.792956, Uct_Loss: 0.014994, Div_loss: 0.000002, Time/step: 6.790118
+01/24/2024 22:57:47 - INFO -   Epoch: 2/5, Step: 557/703, Lr: 0.000000072-0.000071507, Loss: 0.730079, Sim_Loss: 0.713599, Uct_Loss: 0.016477, Div_loss: 0.000002, Time/step: 13.966657
+01/24/2024 23:01:21 - INFO -   Epoch: 2/5, Step: 567/703, Lr: 0.000000071-0.000071103, Loss: 0.867581, Sim_Loss: 0.854076, Uct_Loss: 0.013502, Div_loss: 0.000003, Time/step: 21.392327
+01/24/2024 23:03:27 - INFO -   Epoch: 2/5, Step: 577/703, Lr: 0.000000071-0.000070697, Loss: 0.760077, Sim_Loss: 0.749060, Uct_Loss: 0.011014, Div_loss: 0.000003, Time/step: 12.641970
+01/24/2024 23:05:04 - INFO -   Epoch: 2/5, Step: 587/703, Lr: 0.000000070-0.000070289, Loss: 0.674391, Sim_Loss: 0.658708, Uct_Loss: 0.015680, Div_loss: 0.000003, Time/step: 9.619230
+01/24/2024 23:07:45 - INFO -   Epoch: 2/5, Step: 597/703, Lr: 0.000000070-0.000069880, Loss: 0.954566, Sim_Loss: 0.941805, Uct_Loss: 0.012760, Div_loss: 0.000002, Time/step: 16.189640
+01/24/2024 23:09:48 - INFO -   Epoch: 2/5, Step: 607/703, Lr: 0.000000069-0.000069469, Loss: 0.707531, Sim_Loss: 0.693550, Uct_Loss: 0.013978, Div_loss: 0.000003, Time/step: 12.248690
+01/24/2024 23:13:50 - INFO -   Epoch: 2/5, Step: 617/703, Lr: 0.000000069-0.000069057, Loss: 0.704389, Sim_Loss: 0.687498, Uct_Loss: 0.016889, Div_loss: 0.000001, Time/step: 24.233634
+01/24/2024 23:14:29 - INFO -   Epoch: 2/5, Step: 627/703, Lr: 0.000000069-0.000068643, Loss: 0.687075, Sim_Loss: 0.674478, Uct_Loss: 0.012594, Div_loss: 0.000003, Time/step: 3.894200
+01/24/2024 23:15:45 - INFO -   Epoch: 2/5, Step: 637/703, Lr: 0.000000068-0.000068227, Loss: 0.907209, Sim_Loss: 0.891330, Uct_Loss: 0.015877, Div_loss: 0.000003, Time/step: 7.592909
+01/24/2024 23:19:45 - INFO -   Epoch: 2/5, Step: 647/703, Lr: 0.000000068-0.000067811, Loss: 0.815593, Sim_Loss: 0.802807, Uct_Loss: 0.012783, Div_loss: 0.000002, Time/step: 23.981939
+01/24/2024 23:22:35 - INFO -   Epoch: 2/5, Step: 657/703, Lr: 0.000000067-0.000067392, Loss: 0.705227, Sim_Loss: 0.691527, Uct_Loss: 0.013697, Div_loss: 0.000003, Time/step: 17.016715
+01/24/2024 23:29:09 - INFO -   Epoch: 2/5, Step: 667/703, Lr: 0.000000067-0.000066973, Loss: 0.773214, Sim_Loss: 0.761455, Uct_Loss: 0.011757, Div_loss: 0.000002, Time/step: 39.348972
+01/24/2024 23:30:49 - INFO -   Epoch: 2/5, Step: 677/703, Lr: 0.000000067-0.000066552, Loss: 0.733112, Sim_Loss: 0.719315, Uct_Loss: 0.013795, Div_loss: 0.000002, Time/step: 10.014131
+01/24/2024 23:32:51 - INFO -   Epoch: 2/5, Step: 687/703, Lr: 0.000000066-0.000066129, Loss: 0.765039, Sim_Loss: 0.752259, Uct_Loss: 0.012778, Div_loss: 0.000002, Time/step: 12.247688
+01/24/2024 23:33:46 - INFO -   Epoch: 2/5, Step: 697/703, Lr: 0.000000066-0.000065706, Loss: 0.706427, Sim_Loss: 0.693639, Uct_Loss: 0.012786, Div_loss: 0.000002, Time/step: 5.506464
+01/24/2024 23:34:00 - INFO -   Epoch 2/5 Finished, Train Loss: 0.809687
+01/24/2024 23:34:03 - INFO -   Model saved to log/pytorch_model.bin.1
+01/24/2024 23:34:03 - INFO -   Optimizer saved to log/pytorch_opt.bin.1
+01/24/2024 23:34:03 - INFO -   Eval on val dataset
+0/251/252/253/254/255/256/257/258/259/2510/2511/2512/2513/2514/2515/2516/2517/2518/2519/2520/2521/2522/2523/2524/25Optimized Beta_1: -0.3153933258056674
+Optimized Beta_2: 0.18939037322998264
+01/24/2024 23:55:53 - INFO -   sim matrix size: 1000, 1000
+01/24/2024 23:55:53 - INFO -   	 Length-T: 1000, Length-V:1000
+01/24/2024 23:55:53 - INFO -   Text-to-Video:
+01/24/2024 23:55:53 - INFO -   	>>>  R@1: 47.0 - R@5: 73.1 - R@10: 82.2 - Median R: 2.0 - Mean R: 14.7
+01/24/2024 23:55:53 - INFO -   Video-to-Text:
+01/24/2024 23:55:53 - INFO -   	>>>  V2T$R@1: 48.1 - V2T$R@5: 73.6 - V2T$R@10: 82.5 - V2T$Median R: 2.0 - V2T$Mean R: 9.8
+01/24/2024 23:55:53 - INFO -   The best model is: log/pytorch_model.bin.1, the R1 is: 47.0000
+01/24/2024 23:56:53 - INFO -   Epoch: 3/5, Step: 4/703, Lr: 0.000000065-0.000065281, Loss: 0.531418, Sim_Loss: 0.515460, Uct_Loss: 0.015955, Div_loss: 0.000003, Time/step: 5.993312
+01/24/2024 23:57:51 - INFO -   Epoch: 3/5, Step: 14/703, Lr: 0.000000065-0.000064855, Loss: 0.485814, Sim_Loss: 0.472474, Uct_Loss: 0.013338, Div_loss: 0.000002, Time/step: 5.855103
+01/24/2024 23:59:06 - INFO -   Epoch: 3/5, Step: 24/703, Lr: 0.000000064-0.000064427, Loss: 0.515112, Sim_Loss: 0.501500, Uct_Loss: 0.013610, Div_loss: 0.000002, Time/step: 7.430508
+01/25/2024 00:00:27 - INFO -   Epoch: 3/5, Step: 34/703, Lr: 0.000000064-0.000063999, Loss: 0.594710, Sim_Loss: 0.579571, Uct_Loss: 0.015136, Div_loss: 0.000004, Time/step: 8.153032
+01/25/2024 00:01:30 - INFO -   Epoch: 3/5, Step: 44/703, Lr: 0.000000064-0.000063569, Loss: 0.565409, Sim_Loss: 0.553461, Uct_Loss: 0.011943, Div_loss: 0.000004, Time/step: 6.288721
+01/25/2024 00:02:27 - INFO -   Epoch: 3/5, Step: 54/703, Lr: 0.000000063-0.000063139, Loss: 0.510756, Sim_Loss: 0.496095, Uct_Loss: 0.014658, Div_loss: 0.000003, Time/step: 5.655669
+01/25/2024 00:03:46 - INFO -   Epoch: 3/5, Step: 64/703, Lr: 0.000000063-0.000062707, Loss: 0.582067, Sim_Loss: 0.568127, Uct_Loss: 0.013938, Div_loss: 0.000002, Time/step: 7.935705
+01/25/2024 00:04:53 - INFO -   Epoch: 3/5, Step: 74/703, Lr: 0.000000062-0.000062274, Loss: 0.653618, Sim_Loss: 0.638316, Uct_Loss: 0.015298, Div_loss: 0.000003, Time/step: 6.737730
+01/25/2024 00:05:59 - INFO -   Epoch: 3/5, Step: 84/703, Lr: 0.000000062-0.000061841, Loss: 0.614461, Sim_Loss: 0.598654, Uct_Loss: 0.015802, Div_loss: 0.000005, Time/step: 6.566886
+01/25/2024 00:06:47 - INFO -   Epoch: 3/5, Step: 94/703, Lr: 0.000000061-0.000061406, Loss: 0.499876, Sim_Loss: 0.485160, Uct_Loss: 0.014715, Div_loss: 0.000001, Time/step: 4.803964
+01/25/2024 00:07:35 - INFO -   Epoch: 3/5, Step: 104/703, Lr: 0.000000061-0.000060970, Loss: 0.492164, Sim_Loss: 0.477873, Uct_Loss: 0.014288, Div_loss: 0.000003, Time/step: 4.782853
+01/25/2024 00:08:43 - INFO -   Epoch: 3/5, Step: 114/703, Lr: 0.000000061-0.000060534, Loss: 0.568514, Sim_Loss: 0.553474, Uct_Loss: 0.015038, Div_loss: 0.000002, Time/step: 6.838172
+01/25/2024 00:09:41 - INFO -   Epoch: 3/5, Step: 124/703, Lr: 0.000000060-0.000060097, Loss: 0.538264, Sim_Loss: 0.523318, Uct_Loss: 0.014944, Div_loss: 0.000002, Time/step: 5.744931
+01/25/2024 00:10:52 - INFO -   Epoch: 3/5, Step: 134/703, Lr: 0.000000060-0.000059659, Loss: 0.602542, Sim_Loss: 0.584801, Uct_Loss: 0.017739, Div_loss: 0.000002, Time/step: 7.082112
+01/25/2024 00:11:43 - INFO -   Epoch: 3/5, Step: 144/703, Lr: 0.000000059-0.000059220, Loss: 0.630201, Sim_Loss: 0.616753, Uct_Loss: 0.013446, Div_loss: 0.000002, Time/step: 5.112966
+01/25/2024 00:13:05 - INFO -   Epoch: 3/5, Step: 154/703, Lr: 0.000000059-0.000058780, Loss: 0.544341, Sim_Loss: 0.530492, Uct_Loss: 0.013848, Div_loss: 0.000001, Time/step: 8.231374
+01/25/2024 00:13:59 - INFO -   Epoch: 3/5, Step: 164/703, Lr: 0.000000058-0.000058340, Loss: 0.527798, Sim_Loss: 0.516330, Uct_Loss: 0.011467, Div_loss: 0.000001, Time/step: 5.383552
+01/25/2024 00:15:23 - INFO -   Epoch: 3/5, Step: 174/703, Lr: 0.000000058-0.000057899, Loss: 0.621422, Sim_Loss: 0.608119, Uct_Loss: 0.013299, Div_loss: 0.000004, Time/step: 8.405661
+01/25/2024 00:16:34 - INFO -   Epoch: 3/5, Step: 184/703, Lr: 0.000000057-0.000057457, Loss: 0.554035, Sim_Loss: 0.536201, Uct_Loss: 0.017832, Div_loss: 0.000003, Time/step: 7.088294
+01/25/2024 00:17:57 - INFO -   Epoch: 3/5, Step: 194/703, Lr: 0.000000057-0.000057015, Loss: 0.628280, Sim_Loss: 0.613362, Uct_Loss: 0.014916, Div_loss: 0.000002, Time/step: 8.297994
+01/25/2024 00:18:57 - INFO -   Epoch: 3/5, Step: 204/703, Lr: 0.000000057-0.000056572, Loss: 0.583629, Sim_Loss: 0.567030, Uct_Loss: 0.016597, Div_loss: 0.000002, Time/step: 6.074746
+01/25/2024 00:19:52 - INFO -   Epoch: 3/5, Step: 214/703, Lr: 0.000000056-0.000056129, Loss: 0.527264, Sim_Loss: 0.516735, Uct_Loss: 0.010527, Div_loss: 0.000003, Time/step: 5.413344
+01/25/2024 00:20:54 - INFO -   Epoch: 3/5, Step: 224/703, Lr: 0.000000056-0.000055685, Loss: 0.615577, Sim_Loss: 0.603394, Uct_Loss: 0.012182, Div_loss: 0.000002, Time/step: 6.259584
+01/25/2024 00:21:43 - INFO -   Epoch: 3/5, Step: 234/703, Lr: 0.000000055-0.000055241, Loss: 0.748159, Sim_Loss: 0.733752, Uct_Loss: 0.014406, Div_loss: 0.000001, Time/step: 4.869416
+01/25/2024 00:22:57 - INFO -   Epoch: 3/5, Step: 244/703, Lr: 0.000000055-0.000054797, Loss: 0.458653, Sim_Loss: 0.446846, Uct_Loss: 0.011806, Div_loss: 0.000001, Time/step: 7.417485
+01/25/2024 00:23:37 - INFO -   Epoch: 3/5, Step: 254/703, Lr: 0.000000054-0.000054352, Loss: 0.499045, Sim_Loss: 0.486124, Uct_Loss: 0.012918, Div_loss: 0.000003, Time/step: 3.946783
+01/25/2024 00:24:28 - INFO -   Epoch: 3/5, Step: 264/703, Lr: 0.000000054-0.000053906, Loss: 0.714126, Sim_Loss: 0.700551, Uct_Loss: 0.013573, Div_loss: 0.000002, Time/step: 5.143727
+01/25/2024 00:25:19 - INFO -   Epoch: 3/5, Step: 274/703, Lr: 0.000000053-0.000053461, Loss: 0.598815, Sim_Loss: 0.584195, Uct_Loss: 0.014619, Div_loss: 0.000001, Time/step: 5.115749
+01/25/2024 00:26:05 - INFO -   Epoch: 3/5, Step: 284/703, Lr: 0.000000053-0.000053015, Loss: 0.637255, Sim_Loss: 0.615302, Uct_Loss: 0.021951, Div_loss: 0.000002, Time/step: 4.626375
+01/25/2024 00:27:10 - INFO -   Epoch: 3/5, Step: 294/703, Lr: 0.000000053-0.000052568, Loss: 0.570583, Sim_Loss: 0.559473, Uct_Loss: 0.011107, Div_loss: 0.000002, Time/step: 6.473511
+01/25/2024 00:28:16 - INFO -   Epoch: 3/5, Step: 304/703, Lr: 0.000000052-0.000052122, Loss: 0.490121, Sim_Loss: 0.479221, Uct_Loss: 0.010897, Div_loss: 0.000002, Time/step: 6.576649
+01/25/2024 00:28:58 - INFO -   Epoch: 3/5, Step: 314/703, Lr: 0.000000052-0.000051676, Loss: 0.659570, Sim_Loss: 0.642055, Uct_Loss: 0.017513, Div_loss: 0.000002, Time/step: 4.214498
+01/25/2024 00:29:59 - INFO -   Epoch: 3/5, Step: 324/703, Lr: 0.000000051-0.000051229, Loss: 0.598887, Sim_Loss: 0.588351, Uct_Loss: 0.010534, Div_loss: 0.000001, Time/step: 6.067501
+01/25/2024 00:31:03 - INFO -   Epoch: 3/5, Step: 334/703, Lr: 0.000000051-0.000050782, Loss: 0.594172, Sim_Loss: 0.582011, Uct_Loss: 0.012160, Div_loss: 0.000001, Time/step: 6.400835
+01/25/2024 00:31:57 - INFO -   Epoch: 3/5, Step: 344/703, Lr: 0.000000050-0.000050335, Loss: 0.593922, Sim_Loss: 0.580490, Uct_Loss: 0.013431, Div_loss: 0.000001, Time/step: 5.388887
+01/25/2024 00:33:00 - INFO -   Epoch: 3/5, Step: 354/703, Lr: 0.000000050-0.000049888, Loss: 0.592182, Sim_Loss: 0.578277, Uct_Loss: 0.013904, Div_loss: 0.000001, Time/step: 6.303666
+01/25/2024 00:34:51 - INFO -   Epoch: 3/5, Step: 364/703, Lr: 0.000000049-0.000049441, Loss: 0.617174, Sim_Loss: 0.606214, Uct_Loss: 0.010959, Div_loss: 0.000001, Time/step: 11.166373
+01/25/2024 00:36:03 - INFO -   Epoch: 3/5, Step: 374/703, Lr: 0.000000049-0.000048995, Loss: 0.621408, Sim_Loss: 0.609041, Uct_Loss: 0.012365, Div_loss: 0.000001, Time/step: 7.157705
+01/25/2024 00:37:04 - INFO -   Epoch: 3/5, Step: 384/703, Lr: 0.000000049-0.000048548, Loss: 0.541860, Sim_Loss: 0.529813, Uct_Loss: 0.012046, Div_loss: 0.000002, Time/step: 6.102687
+01/25/2024 00:38:17 - INFO -   Epoch: 3/5, Step: 394/703, Lr: 0.000000048-0.000048101, Loss: 0.590250, Sim_Loss: 0.578951, Uct_Loss: 0.011297, Div_loss: 0.000001, Time/step: 7.316753
+01/25/2024 00:39:55 - INFO -   Epoch: 3/5, Step: 404/703, Lr: 0.000000048-0.000047655, Loss: 0.479123, Sim_Loss: 0.465957, Uct_Loss: 0.013164, Div_loss: 0.000001, Time/step: 9.833924
+01/25/2024 00:41:47 - INFO -   Epoch: 3/5, Step: 414/703, Lr: 0.000000047-0.000047208, Loss: 0.582488, Sim_Loss: 0.569441, Uct_Loss: 0.013046, Div_loss: 0.000001, Time/step: 11.135561
+01/25/2024 00:42:34 - INFO -   Epoch: 3/5, Step: 424/703, Lr: 0.000000047-0.000046762, Loss: 0.626656, Sim_Loss: 0.615893, Uct_Loss: 0.010761, Div_loss: 0.000002, Time/step: 4.724668
+01/25/2024 00:43:21 - INFO -   Epoch: 3/5, Step: 434/703, Lr: 0.000000046-0.000046317, Loss: 0.575757, Sim_Loss: 0.564682, Uct_Loss: 0.011073, Div_loss: 0.000001, Time/step: 4.705230
+01/25/2024 00:44:23 - INFO -   Epoch: 3/5, Step: 444/703, Lr: 0.000000046-0.000045871, Loss: 0.449176, Sim_Loss: 0.435213, Uct_Loss: 0.013961, Div_loss: 0.000002, Time/step: 6.216007
+01/25/2024 00:45:20 - INFO -   Epoch: 3/5, Step: 454/703, Lr: 0.000000045-0.000045426, Loss: 0.643547, Sim_Loss: 0.632927, Uct_Loss: 0.010619, Div_loss: 0.000002, Time/step: 5.655647
+01/25/2024 00:46:13 - INFO -   Epoch: 3/5, Step: 464/703, Lr: 0.000000045-0.000044981, Loss: 0.537064, Sim_Loss: 0.524453, Uct_Loss: 0.012610, Div_loss: 0.000001, Time/step: 5.284230
+01/25/2024 00:47:06 - INFO -   Epoch: 3/5, Step: 474/703, Lr: 0.000000045-0.000044537, Loss: 0.549741, Sim_Loss: 0.538929, Uct_Loss: 0.010810, Div_loss: 0.000002, Time/step: 5.294016
+01/25/2024 00:47:52 - INFO -   Epoch: 3/5, Step: 484/703, Lr: 0.000000044-0.000044093, Loss: 0.551043, Sim_Loss: 0.539631, Uct_Loss: 0.011410, Div_loss: 0.000001, Time/step: 4.673561
+01/25/2024 00:49:31 - INFO -   Epoch: 3/5, Step: 494/703, Lr: 0.000000044-0.000043649, Loss: 0.463988, Sim_Loss: 0.452696, Uct_Loss: 0.011291, Div_loss: 0.000001, Time/step: 9.825135
+01/25/2024 00:50:22 - INFO -   Epoch: 3/5, Step: 504/703, Lr: 0.000000043-0.000043206, Loss: 0.520481, Sim_Loss: 0.507696, Uct_Loss: 0.012784, Div_loss: 0.000002, Time/step: 5.149023
+01/25/2024 00:51:15 - INFO -   Epoch: 3/5, Step: 514/703, Lr: 0.000000043-0.000042764, Loss: 0.683036, Sim_Loss: 0.671355, Uct_Loss: 0.011679, Div_loss: 0.000002, Time/step: 5.305995
+01/25/2024 00:52:06 - INFO -   Epoch: 3/5, Step: 524/703, Lr: 0.000000042-0.000042322, Loss: 0.446380, Sim_Loss: 0.436915, Uct_Loss: 0.009463, Div_loss: 0.000001, Time/step: 5.036814
+01/25/2024 00:53:15 - INFO -   Epoch: 3/5, Step: 534/703, Lr: 0.000000042-0.000041880, Loss: 0.499788, Sim_Loss: 0.488104, Uct_Loss: 0.011683, Div_loss: 0.000001, Time/step: 6.953171
+01/25/2024 00:54:54 - INFO -   Epoch: 3/5, Step: 544/703, Lr: 0.000000041-0.000041440, Loss: 0.561200, Sim_Loss: 0.551174, Uct_Loss: 0.010025, Div_loss: 0.000001, Time/step: 9.877392
+01/25/2024 00:55:49 - INFO -   Epoch: 3/5, Step: 554/703, Lr: 0.000000041-0.000041000, Loss: 0.588536, Sim_Loss: 0.577213, Uct_Loss: 0.011322, Div_loss: 0.000001, Time/step: 5.469558
+01/25/2024 00:56:42 - INFO -   Epoch: 3/5, Step: 564/703, Lr: 0.000000041-0.000040561, Loss: 0.654253, Sim_Loss: 0.641671, Uct_Loss: 0.012579, Div_loss: 0.000002, Time/step: 5.330511
+01/25/2024 00:57:34 - INFO -   Epoch: 3/5, Step: 574/703, Lr: 0.000000040-0.000040122, Loss: 0.623899, Sim_Loss: 0.611048, Uct_Loss: 0.012850, Div_loss: 0.000002, Time/step: 5.241562
+01/25/2024 00:59:13 - INFO -   Epoch: 3/5, Step: 584/703, Lr: 0.000000040-0.000039685, Loss: 0.472990, Sim_Loss: 0.461494, Uct_Loss: 0.011495, Div_loss: 0.000001, Time/step: 9.913614
+01/25/2024 00:59:57 - INFO -   Epoch: 3/5, Step: 594/703, Lr: 0.000000039-0.000039248, Loss: 0.579868, Sim_Loss: 0.570366, Uct_Loss: 0.009500, Div_loss: 0.000002, Time/step: 4.388497
+01/25/2024 01:01:08 - INFO -   Epoch: 3/5, Step: 604/703, Lr: 0.000000039-0.000038812, Loss: 0.511455, Sim_Loss: 0.502141, Uct_Loss: 0.009313, Div_loss: 0.000001, Time/step: 7.114286
+01/25/2024 01:01:53 - INFO -   Epoch: 3/5, Step: 614/703, Lr: 0.000000038-0.000038377, Loss: 0.652259, Sim_Loss: 0.643482, Uct_Loss: 0.008775, Div_loss: 0.000002, Time/step: 4.501879
+01/25/2024 01:02:40 - INFO -   Epoch: 3/5, Step: 624/703, Lr: 0.000000038-0.000037942, Loss: 0.555121, Sim_Loss: 0.543026, Uct_Loss: 0.012093, Div_loss: 0.000001, Time/step: 4.617899
+01/25/2024 01:03:51 - INFO -   Epoch: 3/5, Step: 634/703, Lr: 0.000000038-0.000037509, Loss: 0.442266, Sim_Loss: 0.431734, Uct_Loss: 0.010531, Div_loss: 0.000001, Time/step: 7.187290
+01/25/2024 01:04:37 - INFO -   Epoch: 3/5, Step: 644/703, Lr: 0.000000037-0.000037077, Loss: 0.532444, Sim_Loss: 0.521039, Uct_Loss: 0.011404, Div_loss: 0.000001, Time/step: 4.551539
+01/25/2024 01:05:44 - INFO -   Epoch: 3/5, Step: 654/703, Lr: 0.000000037-0.000036646, Loss: 0.506343, Sim_Loss: 0.493266, Uct_Loss: 0.013076, Div_loss: 0.000001, Time/step: 6.651066
+01/25/2024 01:06:51 - INFO -   Epoch: 3/5, Step: 664/703, Lr: 0.000000036-0.000036216, Loss: 0.469361, Sim_Loss: 0.460108, Uct_Loss: 0.009252, Div_loss: 0.000001, Time/step: 6.777131
+01/25/2024 01:08:06 - INFO -   Epoch: 3/5, Step: 674/703, Lr: 0.000000036-0.000035787, Loss: 0.563105, Sim_Loss: 0.551686, Uct_Loss: 0.011418, Div_loss: 0.000001, Time/step: 7.505503
+01/25/2024 01:08:35 - INFO -   Epoch: 3/5, Step: 684/703, Lr: 0.000000035-0.000035359, Loss: 0.563446, Sim_Loss: 0.554184, Uct_Loss: 0.009260, Div_loss: 0.000001, Time/step: 2.824914
+01/25/2024 01:09:33 - INFO -   Epoch: 3/5, Step: 694/703, Lr: 0.000000035-0.000034932, Loss: 0.534391, Sim_Loss: 0.524648, Uct_Loss: 0.009741, Div_loss: 0.000002, Time/step: 5.888303
+01/25/2024 01:10:58 - INFO -   Epoch 3/5 Finished, Train Loss: 0.574033
+01/25/2024 01:11:00 - INFO -   Model saved to log/pytorch_model.bin.2
+01/25/2024 01:11:00 - INFO -   Optimizer saved to log/pytorch_opt.bin.2
+01/25/2024 01:11:00 - INFO -   Eval on val dataset
+0/251/252/253/254/255/256/257/258/259/2510/2511/2512/2513/2514/2515/2516/2517/2518/2519/2520/2521/2522/2523/2524/25Optimized Beta_1: -0.10314916992187637
+Optimized Beta_2: 0.1449316406249987
+01/25/2024 01:32:45 - INFO -   sim matrix size: 1000, 1000
+01/25/2024 01:32:45 - INFO -   	 Length-T: 1000, Length-V:1000
+01/25/2024 01:32:45 - INFO -   Text-to-Video:
+01/25/2024 01:32:45 - INFO -   	>>>  R@1: 48.4 - R@5: 72.7 - R@10: 82.4 - Median R: 2.0 - Mean R: 14.1
+01/25/2024 01:32:45 - INFO -   Video-to-Text:
+01/25/2024 01:32:45 - INFO -   	>>>  V2T$R@1: 48.0 - V2T$R@5: 73.6 - V2T$R@10: 83.1 - V2T$Median R: 2.0 - V2T$Mean R: 9.5
+01/25/2024 01:32:45 - INFO -   The best model is: log/pytorch_model.bin.2, the R1 is: 48.4000
+01/25/2024 01:34:30 - INFO -   Epoch: 4/5, Step: 1/703, Lr: 0.000000035-0.000034507, Loss: 0.357106, Sim_Loss: 0.344024, Uct_Loss: 0.013081, Div_loss: 0.000001, Time/step: 10.461722
+01/25/2024 01:35:01 - INFO -   Epoch: 4/5, Step: 11/703, Lr: 0.000000034-0.000034082, Loss: 0.471602, Sim_Loss: 0.457966, Uct_Loss: 0.013635, Div_loss: 0.000000, Time/step: 3.099485
+01/25/2024 01:35:51 - INFO -   Epoch: 4/5, Step: 21/703, Lr: 0.000000034-0.000033659, Loss: 0.389663, Sim_Loss: 0.377446, Uct_Loss: 0.012215, Div_loss: 0.000002, Time/step: 4.982332
+01/25/2024 01:37:06 - INFO -   Epoch: 4/5, Step: 31/703, Lr: 0.000000033-0.000033238, Loss: 0.468831, Sim_Loss: 0.453384, Uct_Loss: 0.015447, Div_loss: 0.000001, Time/step: 7.504428
+01/25/2024 01:37:47 - INFO -   Epoch: 4/5, Step: 41/703, Lr: 0.000000033-0.000032817, Loss: 0.485164, Sim_Loss: 0.472826, Uct_Loss: 0.012337, Div_loss: 0.000001, Time/step: 4.120400
+01/25/2024 01:38:38 - INFO -   Epoch: 4/5, Step: 51/703, Lr: 0.000000032-0.000032398, Loss: 0.438106, Sim_Loss: 0.425656, Uct_Loss: 0.012448, Div_loss: 0.000001, Time/step: 5.127092
+01/25/2024 01:39:37 - INFO -   Epoch: 4/5, Step: 61/703, Lr: 0.000000032-0.000031981, Loss: 0.386214, Sim_Loss: 0.376403, Uct_Loss: 0.009810, Div_loss: 0.000001, Time/step: 5.900313
+01/25/2024 01:40:17 - INFO -   Epoch: 4/5, Step: 71/703, Lr: 0.000000032-0.000031565, Loss: 0.539997, Sim_Loss: 0.525547, Uct_Loss: 0.014450, Div_loss: 0.000001, Time/step: 4.025631
+01/25/2024 01:41:04 - INFO -   Epoch: 4/5, Step: 81/703, Lr: 0.000000031-0.000031150, Loss: 0.353642, Sim_Loss: 0.341848, Uct_Loss: 0.011792, Div_loss: 0.000001, Time/step: 4.664330
+01/25/2024 01:42:27 - INFO -   Epoch: 4/5, Step: 91/703, Lr: 0.000000031-0.000030737, Loss: 0.504591, Sim_Loss: 0.493520, Uct_Loss: 0.011070, Div_loss: 0.000001, Time/step: 8.269912
+01/25/2024 01:43:14 - INFO -   Epoch: 4/5, Step: 101/703, Lr: 0.000000030-0.000030325, Loss: 0.561755, Sim_Loss: 0.550606, Uct_Loss: 0.011148, Div_loss: 0.000001, Time/step: 4.725324
+01/25/2024 01:44:03 - INFO -   Epoch: 4/5, Step: 111/703, Lr: 0.000000030-0.000029915, Loss: 0.457939, Sim_Loss: 0.444499, Uct_Loss: 0.013439, Div_loss: 0.000001, Time/step: 4.893337
+01/25/2024 01:44:56 - INFO -   Epoch: 4/5, Step: 121/703, Lr: 0.000000030-0.000029507, Loss: 0.418208, Sim_Loss: 0.406387, Uct_Loss: 0.011821, Div_loss: 0.000001, Time/step: 5.328206
+01/25/2024 01:46:06 - INFO -   Epoch: 4/5, Step: 131/703, Lr: 0.000000029-0.000029100, Loss: 0.486088, Sim_Loss: 0.476187, Uct_Loss: 0.009900, Div_loss: 0.000001, Time/step: 6.967999
+01/25/2024 01:46:56 - INFO -   Epoch: 4/5, Step: 141/703, Lr: 0.000000029-0.000028695, Loss: 0.327230, Sim_Loss: 0.315522, Uct_Loss: 0.011707, Div_loss: 0.000001, Time/step: 4.954134
+01/25/2024 01:47:45 - INFO -   Epoch: 4/5, Step: 151/703, Lr: 0.000000028-0.000028291, Loss: 0.319608, Sim_Loss: 0.307190, Uct_Loss: 0.012416, Div_loss: 0.000002, Time/step: 4.971395
+01/25/2024 01:48:57 - INFO -   Epoch: 4/5, Step: 161/703, Lr: 0.000000028-0.000027890, Loss: 0.460476, Sim_Loss: 0.449273, Uct_Loss: 0.011200, Div_loss: 0.000002, Time/step: 7.145993
+01/25/2024 01:49:36 - INFO -   Epoch: 4/5, Step: 171/703, Lr: 0.000000027-0.000027490, Loss: 0.440449, Sim_Loss: 0.430492, Uct_Loss: 0.009955, Div_loss: 0.000001, Time/step: 3.938813
+01/25/2024 01:50:34 - INFO -   Epoch: 4/5, Step: 181/703, Lr: 0.000000027-0.000027092, Loss: 0.510998, Sim_Loss: 0.500188, Uct_Loss: 0.010809, Div_loss: 0.000001, Time/step: 5.790779
+01/25/2024 01:51:21 - INFO -   Epoch: 4/5, Step: 191/703, Lr: 0.000000027-0.000026695, Loss: 0.466735, Sim_Loss: 0.454196, Uct_Loss: 0.012538, Div_loss: 0.000001, Time/step: 4.701268
+01/25/2024 01:52:05 - INFO -   Epoch: 4/5, Step: 201/703, Lr: 0.000000026-0.000026301, Loss: 0.405779, Sim_Loss: 0.396247, Uct_Loss: 0.009531, Div_loss: 0.000001, Time/step: 4.367591
+01/25/2024 01:53:27 - INFO -   Epoch: 4/5, Step: 211/703, Lr: 0.000000026-0.000025908, Loss: 0.405243, Sim_Loss: 0.394528, Uct_Loss: 0.010714, Div_loss: 0.000001, Time/step: 8.226210
+01/25/2024 01:54:34 - INFO -   Epoch: 4/5, Step: 221/703, Lr: 0.000000026-0.000025518, Loss: 0.419326, Sim_Loss: 0.408998, Uct_Loss: 0.010328, Div_loss: 0.000001, Time/step: 6.658828
+01/25/2024 01:56:01 - INFO -   Epoch: 4/5, Step: 231/703, Lr: 0.000000025-0.000025129, Loss: 0.416557, Sim_Loss: 0.405259, Uct_Loss: 0.011297, Div_loss: 0.000000, Time/step: 8.737186
+01/25/2024 01:57:40 - INFO -   Epoch: 4/5, Step: 241/703, Lr: 0.000000025-0.000024742, Loss: 0.454851, Sim_Loss: 0.438035, Uct_Loss: 0.016815, Div_loss: 0.000001, Time/step: 9.955971
+01/25/2024 01:58:41 - INFO -   Epoch: 4/5, Step: 251/703, Lr: 0.000000024-0.000024358, Loss: 0.446779, Sim_Loss: 0.433693, Uct_Loss: 0.013085, Div_loss: 0.000000, Time/step: 6.082841
+01/25/2024 02:00:32 - INFO -   Epoch: 4/5, Step: 261/703, Lr: 0.000000024-0.000023975, Loss: 0.394362, Sim_Loss: 0.384339, Uct_Loss: 0.010023, Div_loss: 0.000001, Time/step: 11.069172
+01/25/2024 02:01:43 - INFO -   Epoch: 4/5, Step: 271/703, Lr: 0.000000024-0.000023595, Loss: 0.436837, Sim_Loss: 0.425561, Uct_Loss: 0.011276, Div_loss: 0.000001, Time/step: 7.140018
+01/25/2024 02:02:13 - INFO -   Epoch: 4/5, Step: 281/703, Lr: 0.000000023-0.000023216, Loss: 0.423437, Sim_Loss: 0.412774, Uct_Loss: 0.010663, Div_loss: 0.000000, Time/step: 2.952573
+01/25/2024 02:03:11 - INFO -   Epoch: 4/5, Step: 291/703, Lr: 0.000000023-0.000022840, Loss: 0.498343, Sim_Loss: 0.489976, Uct_Loss: 0.008366, Div_loss: 0.000000, Time/step: 5.801183
+01/25/2024 02:04:33 - INFO -   Epoch: 4/5, Step: 301/703, Lr: 0.000000022-0.000022466, Loss: 0.435896, Sim_Loss: 0.426493, Uct_Loss: 0.009403, Div_loss: 0.000000, Time/step: 8.160397
+01/25/2024 02:05:03 - INFO -   Epoch: 4/5, Step: 311/703, Lr: 0.000000022-0.000022094, Loss: 0.388852, Sim_Loss: 0.377053, Uct_Loss: 0.011798, Div_loss: 0.000001, Time/step: 3.041536
+01/25/2024 02:06:14 - INFO -   Epoch: 4/5, Step: 321/703, Lr: 0.000000022-0.000021724, Loss: 0.511376, Sim_Loss: 0.501386, Uct_Loss: 0.009990, Div_loss: 0.000000, Time/step: 7.099994
+01/25/2024 02:07:06 - INFO -   Epoch: 4/5, Step: 331/703, Lr: 0.000000021-0.000021357, Loss: 0.470694, Sim_Loss: 0.460501, Uct_Loss: 0.010193, Div_loss: 0.000000, Time/step: 5.166910
+01/25/2024 02:08:27 - INFO -   Epoch: 4/5, Step: 341/703, Lr: 0.000000021-0.000020992, Loss: 0.438637, Sim_Loss: 0.425506, Uct_Loss: 0.013130, Div_loss: 0.000001, Time/step: 8.147654
+01/25/2024 02:09:14 - INFO -   Epoch: 4/5, Step: 351/703, Lr: 0.000000021-0.000020629, Loss: 0.388647, Sim_Loss: 0.378932, Uct_Loss: 0.009715, Div_loss: 0.000001, Time/step: 4.667257
+01/25/2024 02:10:14 - INFO -   Epoch: 4/5, Step: 361/703, Lr: 0.000000020-0.000020268, Loss: 0.396121, Sim_Loss: 0.387552, Uct_Loss: 0.008568, Div_loss: 0.000001, Time/step: 6.033126
+01/25/2024 02:11:06 - INFO -   Epoch: 4/5, Step: 371/703, Lr: 0.000000020-0.000019910, Loss: 0.506163, Sim_Loss: 0.494730, Uct_Loss: 0.011433, Div_loss: 0.000001, Time/step: 5.236387
+01/25/2024 02:11:58 - INFO -   Epoch: 4/5, Step: 381/703, Lr: 0.000000020-0.000019555, Loss: 0.461089, Sim_Loss: 0.449206, Uct_Loss: 0.011882, Div_loss: 0.000001, Time/step: 5.138841
+01/25/2024 02:12:50 - INFO -   Epoch: 4/5, Step: 391/703, Lr: 0.000000019-0.000019201, Loss: 0.563978, Sim_Loss: 0.556510, Uct_Loss: 0.007468, Div_loss: 0.000000, Time/step: 5.218847
+01/25/2024 02:13:48 - INFO -   Epoch: 4/5, Step: 401/703, Lr: 0.000000019-0.000018850, Loss: 0.516448, Sim_Loss: 0.506181, Uct_Loss: 0.010266, Div_loss: 0.000000, Time/step: 5.826487
+01/25/2024 02:14:39 - INFO -   Epoch: 4/5, Step: 411/703, Lr: 0.000000019-0.000018502, Loss: 0.466976, Sim_Loss: 0.456320, Uct_Loss: 0.010656, Div_loss: 0.000000, Time/step: 5.073110
+01/25/2024 02:15:27 - INFO -   Epoch: 4/5, Step: 421/703, Lr: 0.000000018-0.000018156, Loss: 0.451065, Sim_Loss: 0.440931, Uct_Loss: 0.010134, Div_loss: 0.000000, Time/step: 4.776775
+01/25/2024 02:16:22 - INFO -   Epoch: 4/5, Step: 431/703, Lr: 0.000000018-0.000017813, Loss: 0.432008, Sim_Loss: 0.422361, Uct_Loss: 0.009647, Div_loss: 0.000000, Time/step: 5.527832
+01/25/2024 02:17:05 - INFO -   Epoch: 4/5, Step: 441/703, Lr: 0.000000017-0.000017472, Loss: 0.508333, Sim_Loss: 0.499867, Uct_Loss: 0.008466, Div_loss: 0.000000, Time/step: 4.299844
+01/25/2024 02:18:03 - INFO -   Epoch: 4/5, Step: 451/703, Lr: 0.000000017-0.000017134, Loss: 0.348252, Sim_Loss: 0.339901, Uct_Loss: 0.008350, Div_loss: 0.000000, Time/step: 5.788686
+01/25/2024 02:18:52 - INFO -   Epoch: 4/5, Step: 461/703, Lr: 0.000000017-0.000016799, Loss: 0.412003, Sim_Loss: 0.402374, Uct_Loss: 0.009629, Div_loss: 0.000000, Time/step: 4.888996
+01/25/2024 02:19:40 - INFO -   Epoch: 4/5, Step: 471/703, Lr: 0.000000016-0.000016466, Loss: 0.368297, Sim_Loss: 0.358935, Uct_Loss: 0.009362, Div_loss: 0.000000, Time/step: 4.822863
+01/25/2024 02:20:31 - INFO -   Epoch: 4/5, Step: 481/703, Lr: 0.000000016-0.000016136, Loss: 0.364596, Sim_Loss: 0.351862, Uct_Loss: 0.012734, Div_loss: 0.000000, Time/step: 5.124274
+01/25/2024 02:21:08 - INFO -   Epoch: 4/5, Step: 491/703, Lr: 0.000000016-0.000015808, Loss: 0.432917, Sim_Loss: 0.422070, Uct_Loss: 0.010845, Div_loss: 0.000001, Time/step: 3.692427
+01/25/2024 02:22:26 - INFO -   Epoch: 4/5, Step: 501/703, Lr: 0.000000015-0.000015484, Loss: 0.500866, Sim_Loss: 0.490423, Uct_Loss: 0.010443, Div_loss: 0.000001, Time/step: 7.744386
+01/25/2024 02:23:13 - INFO -   Epoch: 4/5, Step: 511/703, Lr: 0.000000015-0.000015162, Loss: 0.439345, Sim_Loss: 0.429492, Uct_Loss: 0.009852, Div_loss: 0.000001, Time/step: 4.694711
+01/25/2024 02:23:50 - INFO -   Epoch: 4/5, Step: 521/703, Lr: 0.000000015-0.000014843, Loss: 0.496999, Sim_Loss: 0.487694, Uct_Loss: 0.009304, Div_loss: 0.000001, Time/step: 3.695763
+01/25/2024 02:25:18 - INFO -   Epoch: 4/5, Step: 531/703, Lr: 0.000000015-0.000014526, Loss: 0.472418, Sim_Loss: 0.464068, Uct_Loss: 0.008349, Div_loss: 0.000000, Time/step: 8.795301
+01/25/2024 02:26:15 - INFO -   Epoch: 4/5, Step: 541/703, Lr: 0.000000014-0.000014213, Loss: 0.413467, Sim_Loss: 0.405065, Uct_Loss: 0.008402, Div_loss: 0.000000, Time/step: 5.714209
+01/25/2024 02:26:54 - INFO -   Epoch: 4/5, Step: 551/703, Lr: 0.000000014-0.000013902, Loss: 0.502667, Sim_Loss: 0.486734, Uct_Loss: 0.015933, Div_loss: 0.000000, Time/step: 3.890552
+01/25/2024 02:28:35 - INFO -   Epoch: 4/5, Step: 561/703, Lr: 0.000000014-0.000013594, Loss: 0.443000, Sim_Loss: 0.433420, Uct_Loss: 0.009580, Div_loss: 0.000000, Time/step: 10.105552
+01/25/2024 02:29:25 - INFO -   Epoch: 4/5, Step: 571/703, Lr: 0.000000013-0.000013290, Loss: 0.444077, Sim_Loss: 0.433981, Uct_Loss: 0.010096, Div_loss: 0.000000, Time/step: 5.005624
+01/25/2024 02:30:30 - INFO -   Epoch: 4/5, Step: 581/703, Lr: 0.000000013-0.000012988, Loss: 0.382982, Sim_Loss: 0.374019, Uct_Loss: 0.008963, Div_loss: 0.000000, Time/step: 6.490488
+01/25/2024 02:31:44 - INFO -   Epoch: 4/5, Step: 591/703, Lr: 0.000000013-0.000012689, Loss: 0.463522, Sim_Loss: 0.454830, Uct_Loss: 0.008691, Div_loss: 0.000000, Time/step: 7.448262
+01/25/2024 02:32:59 - INFO -   Epoch: 4/5, Step: 601/703, Lr: 0.000000012-0.000012393, Loss: 0.417060, Sim_Loss: 0.404697, Uct_Loss: 0.012362, Div_loss: 0.000000, Time/step: 7.461440
+01/25/2024 02:33:53 - INFO -   Epoch: 4/5, Step: 611/703, Lr: 0.000000012-0.000012100, Loss: 0.367283, Sim_Loss: 0.355623, Uct_Loss: 0.011660, Div_loss: 0.000000, Time/step: 5.454273
+01/25/2024 02:35:05 - INFO -   Epoch: 4/5, Step: 621/703, Lr: 0.000000012-0.000011810, Loss: 0.620983, Sim_Loss: 0.608512, Uct_Loss: 0.012472, Div_loss: 0.000000, Time/step: 7.197594
+01/25/2024 02:35:46 - INFO -   Epoch: 4/5, Step: 631/703, Lr: 0.000000012-0.000011523, Loss: 0.521243, Sim_Loss: 0.511244, Uct_Loss: 0.009998, Div_loss: 0.000000, Time/step: 4.045391
+01/25/2024 02:37:41 - INFO -   Epoch: 4/5, Step: 641/703, Lr: 0.000000011-0.000011239, Loss: 0.583300, Sim_Loss: 0.574509, Uct_Loss: 0.008791, Div_loss: 0.000000, Time/step: 11.506043
+01/25/2024 02:39:47 - INFO -   Epoch: 4/5, Step: 651/703, Lr: 0.000000011-0.000010958, Loss: 0.345654, Sim_Loss: 0.336243, Uct_Loss: 0.009410, Div_loss: 0.000000, Time/step: 12.607370
+01/25/2024 02:41:00 - INFO -   Epoch: 4/5, Step: 661/703, Lr: 0.000000011-0.000010681, Loss: 0.495579, Sim_Loss: 0.484205, Uct_Loss: 0.011373, Div_loss: 0.000000, Time/step: 7.291408
+01/25/2024 02:41:46 - INFO -   Epoch: 4/5, Step: 671/703, Lr: 0.000000010-0.000010406, Loss: 0.489036, Sim_Loss: 0.478964, Uct_Loss: 0.010072, Div_loss: 0.000000, Time/step: 4.607604
+01/25/2024 02:42:24 - INFO -   Epoch: 4/5, Step: 681/703, Lr: 0.000000010-0.000010135, Loss: 0.468549, Sim_Loss: 0.458317, Uct_Loss: 0.010232, Div_loss: 0.000000, Time/step: 3.792829
+01/25/2024 02:43:37 - INFO -   Epoch: 4/5, Step: 691/703, Lr: 0.000000010-0.000009867, Loss: 0.553279, Sim_Loss: 0.541268, Uct_Loss: 0.012010, Div_loss: 0.000000, Time/step: 7.352756
+01/25/2024 02:44:03 - INFO -   Epoch: 4/5, Step: 701/703, Lr: 0.000000010-0.000009602, Loss: 0.463140, Sim_Loss: 0.448849, Uct_Loss: 0.014290, Div_loss: 0.000000, Time/step: 2.600935
+01/25/2024 02:44:06 - INFO -   Epoch 4/5 Finished, Train Loss: 0.440463
+01/25/2024 02:44:09 - INFO -   Model saved to log/pytorch_model.bin.3
+01/25/2024 02:44:09 - INFO -   Optimizer saved to log/pytorch_opt.bin.3
+01/25/2024 02:44:09 - INFO -   Eval on val dataset
+0/251/252/253/254/255/256/257/258/259/2510/2511/2512/2513/2514/2515/2516/2517/2518/2519/2520/2521/2522/2523/2524/25Optimized Beta_1: 0.0098125
+Optimized Beta_2: 0.2610000000000001
+01/25/2024 03:05:33 - INFO -   sim matrix size: 1000, 1000
+01/25/2024 03:05:33 - INFO -   	 Length-T: 1000, Length-V:1000
+01/25/2024 03:05:33 - INFO -   Text-to-Video:
+01/25/2024 03:05:33 - INFO -   	>>>  R@1: 46.8 - R@5: 72.0 - R@10: 81.7 - Median R: 2.0 - Mean R: 14.5
+01/25/2024 03:05:33 - INFO -   Video-to-Text:
+01/25/2024 03:05:33 - INFO -   	>>>  V2T$R@1: 47.9 - V2T$R@5: 73.2 - V2T$R@10: 82.4 - V2T$Median R: 2.0 - V2T$Mean R: 10.0
+01/25/2024 03:05:33 - INFO -   The best model is: log/pytorch_model.bin.2, the R1 is: 48.4000
+01/25/2024 03:06:01 - INFO -   Epoch: 5/5, Step: 8/703, Lr: 0.000000009-0.000009340, Loss: 0.271736, Sim_Loss: 0.263547, Uct_Loss: 0.008189, Div_loss: 0.000000, Time/step: 2.848217
+01/25/2024 03:06:50 - INFO -   Epoch: 5/5, Step: 18/703, Lr: 0.000000009-0.000009082, Loss: 0.455954, Sim_Loss: 0.447090, Uct_Loss: 0.008864, Div_loss: 0.000000, Time/step: 4.844606
+01/25/2024 03:07:56 - INFO -   Epoch: 5/5, Step: 28/703, Lr: 0.000000009-0.000008826, Loss: 0.397365, Sim_Loss: 0.387211, Uct_Loss: 0.010153, Div_loss: 0.000000, Time/step: 6.643740
+01/25/2024 03:08:51 - INFO -   Epoch: 5/5, Step: 38/703, Lr: 0.000000009-0.000008575, Loss: 0.324182, Sim_Loss: 0.315786, Uct_Loss: 0.008396, Div_loss: 0.000000, Time/step: 5.494409
+01/25/2024 03:09:38 - INFO -   Epoch: 5/5, Step: 48/703, Lr: 0.000000008-0.000008326, Loss: 0.392296, Sim_Loss: 0.383304, Uct_Loss: 0.008992, Div_loss: 0.000000, Time/step: 4.676674
+01/25/2024 03:10:26 - INFO -   Epoch: 5/5, Step: 58/703, Lr: 0.000000008-0.000008081, Loss: 0.425376, Sim_Loss: 0.413509, Uct_Loss: 0.011867, Div_loss: 0.000000, Time/step: 4.841423
+01/25/2024 03:10:59 - INFO -   Epoch: 5/5, Step: 68/703, Lr: 0.000000008-0.000007839, Loss: 0.383064, Sim_Loss: 0.373528, Uct_Loss: 0.009536, Div_loss: 0.000000, Time/step: 3.305085
+01/25/2024 03:11:59 - INFO -   Epoch: 5/5, Step: 78/703, Lr: 0.000000008-0.000007600, Loss: 0.365404, Sim_Loss: 0.355092, Uct_Loss: 0.010312, Div_loss: 0.000000, Time/step: 5.994573
+01/25/2024 03:13:28 - INFO -   Epoch: 5/5, Step: 88/703, Lr: 0.000000007-0.000007365, Loss: 0.339950, Sim_Loss: 0.329900, Uct_Loss: 0.010050, Div_loss: 0.000000, Time/step: 8.868153
+01/25/2024 03:14:46 - INFO -   Epoch: 5/5, Step: 98/703, Lr: 0.000000007-0.000007133, Loss: 0.399081, Sim_Loss: 0.386991, Uct_Loss: 0.012089, Div_loss: 0.000000, Time/step: 7.779923
+01/25/2024 03:15:47 - INFO -   Epoch: 5/5, Step: 108/703, Lr: 0.000000007-0.000006905, Loss: 0.506874, Sim_Loss: 0.497667, Uct_Loss: 0.009207, Div_loss: 0.000000, Time/step: 6.116415
+01/25/2024 03:16:58 - INFO -   Epoch: 5/5, Step: 118/703, Lr: 0.000000007-0.000006680, Loss: 0.271884, Sim_Loss: 0.258431, Uct_Loss: 0.013453, Div_loss: 0.000000, Time/step: 7.081510
+01/25/2024 03:18:40 - INFO -   Epoch: 5/5, Step: 128/703, Lr: 0.000000006-0.000006459, Loss: 0.412448, Sim_Loss: 0.402899, Uct_Loss: 0.009549, Div_loss: 0.000000, Time/step: 10.241924
+01/25/2024 03:19:49 - INFO -   Epoch: 5/5, Step: 138/703, Lr: 0.000000006-0.000006241, Loss: 0.334837, Sim_Loss: 0.323981, Uct_Loss: 0.010856, Div_loss: 0.000000, Time/step: 6.830197
+01/25/2024 03:20:45 - INFO -   Epoch: 5/5, Step: 148/703, Lr: 0.000000006-0.000006026, Loss: 0.463972, Sim_Loss: 0.455168, Uct_Loss: 0.008805, Div_loss: 0.000000, Time/step: 5.645089
+01/25/2024 03:21:54 - INFO -   Epoch: 5/5, Step: 158/703, Lr: 0.000000006-0.000005815, Loss: 0.410513, Sim_Loss: 0.402552, Uct_Loss: 0.007960, Div_loss: 0.000000, Time/step: 6.915563
+01/25/2024 03:22:52 - INFO -   Epoch: 5/5, Step: 168/703, Lr: 0.000000006-0.000005608, Loss: 0.401036, Sim_Loss: 0.389751, Uct_Loss: 0.011284, Div_loss: 0.000000, Time/step: 5.797314
+01/25/2024 03:23:36 - INFO -   Epoch: 5/5, Step: 178/703, Lr: 0.000000005-0.000005404, Loss: 0.390152, Sim_Loss: 0.380400, Uct_Loss: 0.009752, Div_loss: 0.000000, Time/step: 4.412829
+01/25/2024 03:25:59 - INFO -   Epoch: 5/5, Step: 188/703, Lr: 0.000000005-0.000005204, Loss: 0.402649, Sim_Loss: 0.392392, Uct_Loss: 0.010256, Div_loss: 0.000000, Time/step: 14.247767
+01/25/2024 03:26:50 - INFO -   Epoch: 5/5, Step: 198/703, Lr: 0.000000005-0.000005007, Loss: 0.320504, Sim_Loss: 0.311321, Uct_Loss: 0.009183, Div_loss: 0.000000, Time/step: 5.083114
+01/25/2024 03:27:12 - INFO -   Epoch: 5/5, Step: 208/703, Lr: 0.000000005-0.000004814, Loss: 0.318177, Sim_Loss: 0.306899, Uct_Loss: 0.011277, Div_loss: 0.000000, Time/step: 2.279151
+01/25/2024 03:28:39 - INFO -   Epoch: 5/5, Step: 218/703, Lr: 0.000000005-0.000004624, Loss: 0.471894, Sim_Loss: 0.459612, Uct_Loss: 0.012282, Div_loss: 0.000000, Time/step: 8.661598
+01/25/2024 03:29:59 - INFO -   Epoch: 5/5, Step: 228/703, Lr: 0.000000004-0.000004439, Loss: 0.427585, Sim_Loss: 0.414593, Uct_Loss: 0.012992, Div_loss: 0.000000, Time/step: 7.993924
+01/25/2024 03:30:39 - INFO -   Epoch: 5/5, Step: 238/703, Lr: 0.000000004-0.000004256, Loss: 0.303636, Sim_Loss: 0.291725, Uct_Loss: 0.011911, Div_loss: 0.000000, Time/step: 3.969785
+01/25/2024 03:31:29 - INFO -   Epoch: 5/5, Step: 248/703, Lr: 0.000000004-0.000004078, Loss: 0.429281, Sim_Loss: 0.416815, Uct_Loss: 0.012466, Div_loss: 0.000000, Time/step: 5.049006
+01/25/2024 03:32:43 - INFO -   Epoch: 5/5, Step: 258/703, Lr: 0.000000004-0.000003903, Loss: 0.362370, Sim_Loss: 0.352443, Uct_Loss: 0.009928, Div_loss: 0.000000, Time/step: 7.426056
+01/25/2024 03:33:33 - INFO -   Epoch: 5/5, Step: 268/703, Lr: 0.000000004-0.000003732, Loss: 0.418103, Sim_Loss: 0.407057, Uct_Loss: 0.011046, Div_loss: 0.000000, Time/step: 4.937747
+01/25/2024 03:35:00 - INFO -   Epoch: 5/5, Step: 278/703, Lr: 0.000000004-0.000003564, Loss: 0.354878, Sim_Loss: 0.347682, Uct_Loss: 0.007196, Div_loss: 0.000000, Time/step: 8.725349
+01/25/2024 03:36:21 - INFO -   Epoch: 5/5, Step: 288/703, Lr: 0.000000003-0.000003400, Loss: 0.490942, Sim_Loss: 0.481261, Uct_Loss: 0.009680, Div_loss: 0.000000, Time/step: 8.129423
+01/25/2024 03:37:16 - INFO -   Epoch: 5/5, Step: 298/703, Lr: 0.000000003-0.000003240, Loss: 0.337525, Sim_Loss: 0.327419, Uct_Loss: 0.010105, Div_loss: 0.000000, Time/step: 5.459591
+01/25/2024 03:38:20 - INFO -   Epoch: 5/5, Step: 308/703, Lr: 0.000000003-0.000003084, Loss: 0.380239, Sim_Loss: 0.368047, Uct_Loss: 0.012192, Div_loss: 0.000000, Time/step: 6.416482
+01/25/2024 03:39:17 - INFO -   Epoch: 5/5, Step: 318/703, Lr: 0.000000003-0.000002931, Loss: 0.421759, Sim_Loss: 0.410894, Uct_Loss: 0.010865, Div_loss: 0.000000, Time/step: 5.673976
+01/25/2024 03:40:45 - INFO -   Epoch: 5/5, Step: 328/703, Lr: 0.000000003-0.000002782, Loss: 0.465677, Sim_Loss: 0.456763, Uct_Loss: 0.008914, Div_loss: 0.000000, Time/step: 8.801439
+01/25/2024 03:41:55 - INFO -   Epoch: 5/5, Step: 338/703, Lr: 0.000000003-0.000002637, Loss: 0.413311, Sim_Loss: 0.403980, Uct_Loss: 0.009331, Div_loss: 0.000000, Time/step: 7.034718
+01/25/2024 03:42:53 - INFO -   Epoch: 5/5, Step: 348/703, Lr: 0.000000002-0.000002496, Loss: 0.432904, Sim_Loss: 0.424110, Uct_Loss: 0.008795, Div_loss: 0.000000, Time/step: 5.725616
+01/25/2024 03:43:14 - INFO -   Epoch: 5/5, Step: 358/703, Lr: 0.000000002-0.000002358, Loss: 0.360113, Sim_Loss: 0.350792, Uct_Loss: 0.009321, Div_loss: 0.000000, Time/step: 2.140787
+01/25/2024 03:45:28 - INFO -   Epoch: 5/5, Step: 368/703, Lr: 0.000000002-0.000002224, Loss: 0.365312, Sim_Loss: 0.355392, Uct_Loss: 0.009920, Div_loss: 0.000000, Time/step: 13.401924
+01/25/2024 03:46:55 - INFO -   Epoch: 5/5, Step: 378/703, Lr: 0.000000002-0.000002095, Loss: 0.266264, Sim_Loss: 0.255802, Uct_Loss: 0.010461, Div_loss: 0.000000, Time/step: 8.729113
+01/25/2024 03:47:27 - INFO -   Epoch: 5/5, Step: 388/703, Lr: 0.000000002-0.000001969, Loss: 0.386749, Sim_Loss: 0.377245, Uct_Loss: 0.009503, Div_loss: 0.000000, Time/step: 3.187027
+01/25/2024 03:49:17 - INFO -   Epoch: 5/5, Step: 398/703, Lr: 0.000000002-0.000001846, Loss: 0.338399, Sim_Loss: 0.328491, Uct_Loss: 0.009907, Div_loss: 0.000000, Time/step: 11.030346
+01/25/2024 03:49:47 - INFO -   Epoch: 5/5, Step: 408/703, Lr: 0.000000002-0.000001728, Loss: 0.342020, Sim_Loss: 0.330762, Uct_Loss: 0.011257, Div_loss: 0.000000, Time/step: 3.007811
+01/25/2024 03:50:49 - INFO -   Epoch: 5/5, Step: 418/703, Lr: 0.000000002-0.000001613, Loss: 0.361713, Sim_Loss: 0.353830, Uct_Loss: 0.007884, Div_loss: 0.000000, Time/step: 6.140562
+01/25/2024 03:51:54 - INFO -   Epoch: 5/5, Step: 428/703, Lr: 0.000000002-0.000001503, Loss: 0.389972, Sim_Loss: 0.381231, Uct_Loss: 0.008741, Div_loss: 0.000000, Time/step: 6.483390
+01/25/2024 03:52:53 - INFO -   Epoch: 5/5, Step: 438/703, Lr: 0.000000001-0.000001396, Loss: 0.349709, Sim_Loss: 0.341182, Uct_Loss: 0.008527, Div_loss: 0.000000, Time/step: 5.949998
+01/25/2024 03:53:59 - INFO -   Epoch: 5/5, Step: 448/703, Lr: 0.000000001-0.000001293, Loss: 0.354484, Sim_Loss: 0.344823, Uct_Loss: 0.009660, Div_loss: 0.000000, Time/step: 6.565289
+01/25/2024 03:54:38 - INFO -   Epoch: 5/5, Step: 458/703, Lr: 0.000000001-0.000001194, Loss: 0.382034, Sim_Loss: 0.370609, Uct_Loss: 0.011425, Div_loss: 0.000000, Time/step: 3.891182
+01/25/2024 03:55:23 - INFO -   Epoch: 5/5, Step: 468/703, Lr: 0.000000001-0.000001099, Loss: 0.424835, Sim_Loss: 0.411800, Uct_Loss: 0.013034, Div_loss: 0.000000, Time/step: 4.546323
+01/25/2024 03:56:15 - INFO -   Epoch: 5/5, Step: 478/703, Lr: 0.000000001-0.000001008, Loss: 0.572806, Sim_Loss: 0.563636, Uct_Loss: 0.009170, Div_loss: 0.000000, Time/step: 5.221800
+01/25/2024 03:57:03 - INFO -   Epoch: 5/5, Step: 488/703, Lr: 0.000000001-0.000000920, Loss: 0.327780, Sim_Loss: 0.318826, Uct_Loss: 0.008953, Div_loss: 0.000000, Time/step: 4.755224
+01/25/2024 03:57:49 - INFO -   Epoch: 5/5, Step: 498/703, Lr: 0.000000001-0.000000837, Loss: 0.351863, Sim_Loss: 0.341118, Uct_Loss: 0.010745, Div_loss: 0.000000, Time/step: 4.621316
+01/25/2024 03:58:21 - INFO -   Epoch: 5/5, Step: 508/703, Lr: 0.000000001-0.000000757, Loss: 0.401888, Sim_Loss: 0.393217, Uct_Loss: 0.008671, Div_loss: 0.000000, Time/step: 3.143974
+01/25/2024 03:59:03 - INFO -   Epoch: 5/5, Step: 518/703, Lr: 0.000000001-0.000000682, Loss: 0.338074, Sim_Loss: 0.327843, Uct_Loss: 0.010231, Div_loss: 0.000000, Time/step: 4.271290
+01/25/2024 03:59:51 - INFO -   Epoch: 5/5, Step: 528/703, Lr: 0.000000001-0.000000610, Loss: 0.306942, Sim_Loss: 0.295581, Uct_Loss: 0.011361, Div_loss: 0.000000, Time/step: 4.777060
+01/25/2024 04:00:24 - INFO -   Epoch: 5/5, Step: 538/703, Lr: 0.000000001-0.000000543, Loss: 0.372106, Sim_Loss: 0.361242, Uct_Loss: 0.010864, Div_loss: 0.000000, Time/step: 3.288791
+01/25/2024 04:01:12 - INFO -   Epoch: 5/5, Step: 548/703, Lr: 0.000000000-0.000000479, Loss: 0.431851, Sim_Loss: 0.421516, Uct_Loss: 0.010335, Div_loss: 0.000000, Time/step: 4.818646
+01/25/2024 04:02:07 - INFO -   Epoch: 5/5, Step: 558/703, Lr: 0.000000000-0.000000419, Loss: 0.288220, Sim_Loss: 0.277802, Uct_Loss: 0.010417, Div_loss: 0.000000, Time/step: 5.512382
+01/25/2024 04:02:42 - INFO -   Epoch: 5/5, Step: 568/703, Lr: 0.000000000-0.000000364, Loss: 0.475788, Sim_Loss: 0.467576, Uct_Loss: 0.008211, Div_loss: 0.000000, Time/step: 3.454568
+01/25/2024 04:04:03 - INFO -   Epoch: 5/5, Step: 578/703, Lr: 0.000000000-0.000000312, Loss: 0.384523, Sim_Loss: 0.377181, Uct_Loss: 0.007342, Div_loss: 0.000000, Time/step: 8.085487
+01/25/2024 04:05:05 - INFO -   Epoch: 5/5, Step: 588/703, Lr: 0.000000000-0.000000264, Loss: 0.422882, Sim_Loss: 0.412157, Uct_Loss: 0.010724, Div_loss: 0.000000, Time/step: 6.250379
+01/25/2024 04:05:52 - INFO -   Epoch: 5/5, Step: 598/703, Lr: 0.000000000-0.000000220, Loss: 0.456824, Sim_Loss: 0.446406, Uct_Loss: 0.010418, Div_loss: 0.000000, Time/step: 4.660735
+01/25/2024 04:06:48 - INFO -   Epoch: 5/5, Step: 608/703, Lr: 0.000000000-0.000000180, Loss: 0.373055, Sim_Loss: 0.363526, Uct_Loss: 0.009529, Div_loss: 0.000000, Time/step: 5.597882
+01/25/2024 04:08:03 - INFO -   Epoch: 5/5, Step: 618/703, Lr: 0.000000000-0.000000144, Loss: 0.438374, Sim_Loss: 0.429305, Uct_Loss: 0.009069, Div_loss: 0.000000, Time/step: 7.511920
+01/25/2024 04:08:48 - INFO -   Epoch: 5/5, Step: 628/703, Lr: 0.000000000-0.000000112, Loss: 0.351709, Sim_Loss: 0.342404, Uct_Loss: 0.009305, Div_loss: 0.000000, Time/step: 4.491942
+01/25/2024 04:09:25 - INFO -   Epoch: 5/5, Step: 638/703, Lr: 0.000000000-0.000000084, Loss: 0.387701, Sim_Loss: 0.377489, Uct_Loss: 0.010212, Div_loss: 0.000000, Time/step: 3.724635
+01/25/2024 04:11:07 - INFO -   Epoch: 5/5, Step: 648/703, Lr: 0.000000000-0.000000060, Loss: 0.434282, Sim_Loss: 0.423636, Uct_Loss: 0.010645, Div_loss: 0.000000, Time/step: 10.152169
+01/25/2024 04:11:52 - INFO -   Epoch: 5/5, Step: 658/703, Lr: 0.000000000-0.000000040, Loss: 0.449175, Sim_Loss: 0.437394, Uct_Loss: 0.011781, Div_loss: 0.000000, Time/step: 4.562034
+01/25/2024 04:12:26 - INFO -   Epoch: 5/5, Step: 668/703, Lr: 0.000000000-0.000000024, Loss: 0.358267, Sim_Loss: 0.346503, Uct_Loss: 0.011764, Div_loss: 0.000000, Time/step: 3.324284
+01/25/2024 04:13:41 - INFO -   Epoch: 5/5, Step: 678/703, Lr: 0.000000000-0.000000012, Loss: 0.479681, Sim_Loss: 0.470062, Uct_Loss: 0.009619, Div_loss: 0.000000, Time/step: 7.593906
+01/25/2024 04:14:28 - INFO -   Epoch: 5/5, Step: 688/703, Lr: 0.000000000-0.000000004, Loss: 0.457933, Sim_Loss: 0.447183, Uct_Loss: 0.010750, Div_loss: 0.000000, Time/step: 4.700961
+01/25/2024 04:14:56 - INFO -   Epoch: 5/5, Step: 698/703, Lr: 0.000000000-0.000000000, Loss: 0.399101, Sim_Loss: 0.390811, Uct_Loss: 0.008291, Div_loss: 0.000000, Time/step: 2.774975
+01/25/2024 04:15:25 - INFO -   Epoch 5/5 Finished, Train Loss: 0.386776
+01/25/2024 04:15:27 - INFO -   Model saved to log/pytorch_model.bin.4
+01/25/2024 04:15:27 - INFO -   Optimizer saved to log/pytorch_opt.bin.4
+01/25/2024 04:15:27 - INFO -   Eval on val dataset
+0/251/252/253/254/255/256/257/258/259/2510/2511/2512/2513/2514/2515/2516/2517/2518/2519/2520/2521/2522/2523/2524/25Optimized Beta_1: 0.1927187500000001
+Optimized Beta_2: 0.34729882812500024
+01/25/2024 04:36:37 - INFO -   sim matrix size: 1000, 1000
+01/25/2024 04:36:37 - INFO -   	 Length-T: 1000, Length-V:1000
+01/25/2024 04:36:37 - INFO -   Text-to-Video:
+01/25/2024 04:36:37 - INFO -   	>>>  R@1: 46.9 - R@5: 71.7 - R@10: 82.1 - Median R: 2.0 - Mean R: 14.8
+01/25/2024 04:36:37 - INFO -   Video-to-Text:
+01/25/2024 04:36:37 - INFO -   	>>>  V2T$R@1: 48.0 - V2T$R@5: 72.7 - V2T$R@10: 82.9 - V2T$Median R: 2.0 - V2T$Mean R: 10.3
+01/25/2024 04:36:37 - INFO -   The best model is: log/pytorch_model.bin.2, the R1 is: 48.4000
+01/25/2024 04:36:37 - INFO -   Model loaded from log/pytorch_model.bin.2
+01/25/2024 04:36:40 - INFO -   loading archive file /home/lihao/PAU/modules/cross-base
+01/25/2024 04:36:40 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+01/25/2024 04:36:40 - INFO -   Weight doesn't exsits. /home/lihao/PAU/modules/cross-base/cross_pytorch_model.bin
+01/25/2024 04:36:40 - WARNING -   Stage-One:True, Stage-Two:False
+01/25/2024 04:36:40 - WARNING -   Test retrieval by loose type.
+01/25/2024 04:36:40 - WARNING -   	 embed_dim: 512
+01/25/2024 04:36:40 - WARNING -   	 image_resolution: 224
+01/25/2024 04:36:40 - WARNING -   	 vision_layers: 12
+01/25/2024 04:36:40 - WARNING -   	 vision_width: 768
+01/25/2024 04:36:40 - WARNING -   	 vision_patch_size: 32
+01/25/2024 04:36:40 - WARNING -   	 context_length: 77
+01/25/2024 04:36:40 - WARNING -   	 vocab_size: 49408
+01/25/2024 04:36:40 - WARNING -   	 transformer_width: 512
+01/25/2024 04:36:40 - WARNING -   	 transformer_heads: 8
+01/25/2024 04:36:40 - WARNING -   	 transformer_layers: 12
+01/25/2024 04:36:40 - WARNING -   		 linear_patch: 2d
+01/25/2024 04:36:40 - WARNING -   	 cut_top_layer: 0
+01/25/2024 04:36:42 - WARNING -   	 sim_header: seqTransf
+/home/lihao/miniconda3/envs/xclip/lib/python3.8/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+01/25/2024 04:36:50 - INFO -   --------------------
+01/25/2024 04:36:50 - INFO -   Weights from pretrained model not used in PAU: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+0/251/252/253/254/255/256/257/258/259/2510/2511/2512/2513/2514/2515/2516/2517/2518/2519/2520/2521/2522/2523/2524/25Optimized Beta_1: -0.10314916992187637
+Optimized Beta_2: 0.1449316406249987
+01/25/2024 04:57:46 - INFO -   sim matrix size: 1000, 1000
+01/25/2024 04:57:46 - INFO -   	 Length-T: 1000, Length-V:1000
+01/25/2024 04:57:46 - INFO -   Text-to-Video:
+01/25/2024 04:57:46 - INFO -   	>>>  R@1: 48.4 - R@5: 72.7 - R@10: 82.4 - Median R: 2.0 - Mean R: 14.1
+01/25/2024 04:57:46 - INFO -   Video-to-Text:
+01/25/2024 04:57:46 - INFO -   	>>>  V2T$R@1: 48.0 - V2T$R@5: 73.6 - V2T$R@10: 83.1 - V2T$Median R: 2.0 - V2T$Mean R: 9.5
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************

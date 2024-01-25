@@ -5,7 +5,7 @@ job_name="ex0"
 DATA_PATH="../data/VR_Dataset"
 SAVE_PATH="log"
 python -m torch.distributed.launch --nproc_per_node=4 --master_port 29531\
-    main_pau.py --do_train --num_thread_reader=8 \
+    main_pau.py --do_train --do_rerank_learn --num_thread_reader=8 \
     --epochs=3 --batch_size=256 --n_display=10 \
     --init_model ${MODEL_PATH} \
     --data_path ${DATA_PATH}/MSVD/msvd_data \

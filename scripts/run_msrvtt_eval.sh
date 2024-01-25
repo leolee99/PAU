@@ -1,9 +1,9 @@
-export CUDA_VISIBLE_DEVICES=4
+export CUDA_VISIBLE_DEVICES=1
 
 job_name="ex0"
 DATA_PATH="../data/VR_Dataset"
 SAVE_PATH="log"
-MODEL_PATH="log/MSRVTT-pytorch_model.bin.0"
+MODEL_PATH="log/pytorch_model.bin.2"
 python -m torch.distributed.launch --nproc_per_node=1 --master_port 29514\
     main_pau.py --do_eval --num_thread_reader=8 \
     --lr 1e-4 --batch_size=256  --batch_size_val 40 \

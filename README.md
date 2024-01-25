@@ -56,7 +56,9 @@ We provide the trained model files for evaluation. You can download the model tr
 
 ## Training
 
-Please edit the ```${DATA_PATH}``` to the path of your dataset, and the ```${SAVE_PATH}``` to the path of the checkpoints where to save.
+Please edit the ```${DATA_PATH}``` to the path of your dataset, and the ```${SAVE_PATH}``` to the path of the checkpoints where to save. 
+
+***Tips:*** ```${do_rerank_learn}``` indicates whether to automatically learn the beta parameter of the model after each model training, which will take a longer time. You can remove it if you wish to speed up the validate process.
 
 **MSR-VTT**
 
@@ -76,9 +78,35 @@ sh scripts/run_msvd.sh
 sh scripts/run_didemo.sh
 ```
 
+
+## Rerank Beta Learning
+
+If you want to get the best beta parameters of re-ranking (may take more time). Please edit the ```${DATA_PATH}``` to the path of your dataset, and the ```${SAVE_PATH}``` to the path of the checkpoints where to save. 
+
+You can freely construct a beta learning set, but it is preferable that the data within it have not been used in previous model training process. Here, we default to using the validation set as the beta learning set.
+
+**MSR-VTT**
+
+```bash
+sh scripts/run_msrvtt_learn.sh
+```
+
+**MSVD**
+
+```bash
+sh scripts/run_msvd_learn.sh
+```
+
+**DiDeMo**
+
+```bash
+sh scripts/run_didemo_learn.sh
+```
+
+
 ## Evaluation
 
-Please edit the ```${DATA_PATH}``` to the path of your dataset, the ```${SAVE_PATH}``` to the path of the checkpoints where to save, and the ```${MODEL_PATH}``` to the path of the checkpoints to be loaded.
+Please edit the ```${DATA_PATH}``` to the path of your dataset, the ```${SAVE_PATH}``` to the path of the checkpoints where to save, and the ```${MODEL_PATH}``` to the path of the checkpoints to be loaded. ```${rerank_coe_v}``` and ```${rerank_coe_t}``` are the rerank parameters ($\beta_1$, $\beta_2$) obtained in the Beta Learning Process.
 
 **MSR-VTT**
 
@@ -97,6 +125,7 @@ sh scripts/run_msvd_eval.sh
 ```bash
 sh scripts/run_didemo_eval.sh
 ```
+
 
 ## Reference
 
