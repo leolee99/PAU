@@ -437,11 +437,36 @@ def eval_epoch(args, model, test_dataloader, device, n_gpu, epoch=100):
             count_rank_1_col = sum(np.argmax(transformed_matrix, axis=1) == np.arange(transformed_matrix.shape[0]))
             count_rank_1 = (count_rank_1_row + count_rank_1_col) / 2
             return -count_rank_1
+
+        def multi_sentence_objective_function(params):
+            beta_1, beta_2 = params
+            transformed_matrix = np.exp(-beta_1 * ret['vu_vector'].T) * np.exp(-beta_2 * ret['tu_vector']) * sim_matrix
+
+            cut_off_points2len_ = [itm + 1 for itm in cut_off_points_]
+            max_length = max([e_-s_ for s_, e_ in zip([0]+cut_off_points2len_[:-1], cut_off_points2len_)])
+            sim_matrix_new = []
+            for s_, e_ in zip([0] + cut_off_points2len_[:-1], cut_off_points2len_):
+                sim_matrix_new.append(np.concatenate((transformed_matrix[s_:e_],
+                                                    np.full((max_length-e_+s_, transformed_matrix.shape[1]), -np.inf)), axis=0))
+            transformed_matrix = np.stack(tuple(sim_matrix_new), axis=0)
+            # logger.info("after reshape, sim matrix size: {} x {} x {}".
+            #            format(transformed_matrix.shape[0], transformed_matrix.shape[1], transformed_matrix.shape[2]))
+
+            tv_metrics = tensor_text_to_video_metrics(transformed_matrix)
+            vt_metrics = compute_metrics(tensor_video_to_text_sim(transformed_matrix))
+
+            count_rank_1 = (tv_metrics['R1'] + vt_metrics['R1']) / 2
+            return -count_rank_1
         
         # learn the best beta
         if args.do_rerank_learn:
             initial_points = [(x, y) for x in np.arange(args.start_point_range, args.end_point_range, args.step_length) for y in np.arange(args.start_point_range, args.end_point_range, args.step_length)]
-            results = [minimize(objective_function, x0, method='Nelder-Mead', options={'maxiter': args.max_interations}) for x0 in initial_points]
+
+            if multi_sentence_:
+                results = [minimize(multi_sentence_objective_function, x0, method='Nelder-Mead', options={'maxiter': args.max_interations}) for x0 in initial_points]
+            else:
+                results = [minimize(objective_function, x0, method='Nelder-Mead', options={'maxiter': args.max_interations}) for x0 in initial_points]
+
             best_solution = min(results, key=lambda x: x.fun)
             print(f"Optimized Beta_1: {best_solution.x[0]}")
             print(f"Optimized Beta_2: {best_solution.x[1]}")
@@ -466,6 +491,7 @@ def eval_epoch(args, model, test_dataloader, device, n_gpu, epoch=100):
 
         tv_metrics = tensor_text_to_video_metrics(sim_matrix)
         vt_metrics = compute_metrics(tensor_video_to_text_sim(sim_matrix))
+
     else:
         logger.info("sim matrix size: {}, {}".format(sim_matrix.shape[0], sim_matrix.shape[1]))
         tv_metrics = compute_metrics(sim_matrix)
