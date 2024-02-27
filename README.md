@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The implementation for NeurIPS 2023 paper of ["Prototype-based Aleatoric Uncertainty Quantification for Cross-modal Retrieval."](https://openreview.net/pdf?id=ECRgBK6sk1).
+The implementation for NeurIPS 2023 paper of ["Prototype-based Aleatoric Uncertainty Quantification for Cross-modal Retrieval."](https://openreview.net/pdf?id=ECRgBK6sk1). It is built on top of the [CLIP4Clip](https://github.com/ArrowLuo/CLIP4Clip) and the [X-CLIP](https://github.com/xuguohai/X-CLIP)
 
 
 <!-- PAU Introdcution -->
