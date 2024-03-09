@@ -10,6 +10,12 @@ The implementation for NeurIPS 2023 paper of ["Prototype-based Aleatoric Uncerta
  <img src="assets/Framework.png" width=80%>
 </p>
 
+
+## Update
+
+**2024.3.9:** The code of Image-text Retrieval has been updated. You can find it in directory ```Image-Text-Retrieval/```.
+
+
 ## Requirement
 
 We recommend the following dependencies.
