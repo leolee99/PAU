@@ -69,3 +69,19 @@ If you want to employ re-rank with auto coefficient learning, you can add ```--u
 ```bash
 python main.py --eval --vision_model ViT-B/32 --K_prototype 8 --resume ${MODELPATH} --use_rerank --rerank_learn
 ```
+
+## Reference
+
+If you found this code useful, please cite the following paper:
+```
+@inproceedings{PAU,
+  author    = {Hao Li and
+               Jingkuan Song and
+               Lianli Gao and
+               Xiaosu Zhu and
+               Heng Tao Shen},
+  title     = {Prototype-based Aleatoric Uncertainty Quantification for Cross-modal Retrieval},
+  booktitle = {NeurIPS},
+  year      = {2023}
+}
+```
