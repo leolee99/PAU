@@ -107,7 +107,7 @@ def parse_args():
         '--step_length', type=float, default=0.05, help='The step of each point gap in the rerank learning.'
         )
     parser.add_argument(
-        "--use_rerank", type=bool, default=False, help="wether to employ rerank."
+        "--use_rerank", action="store_true", default=False, help="wether to employ rerank."
     )
     parser.add_argument(
         "--rerank_learn", action="store_true", default=False, help="wether to learn best rerank coefficient."
