@@ -1,6 +1,6 @@
 # PAU for Image-text Matching
 
-The implementation on Image-text Matching for NeurIPS 2023 paper of ["Prototype-based Aleatoric Uncertainty Quantification for Cross-modal Retrieval."](https://openreview.net/pdf?id=ECRgBK6sk1). It is built on top of the [**project**](https://github.com/leolee99/CLIP_ITM)
+The implementation on Image-text Matching for NeurIPS 2023 paper of ["Prototype-based Aleatoric Uncertainty Quantification for Cross-modal Retrieval."](https://openreview.net/pdf?id=ECRgBK6sk1). It is built on top of the [**project**](https://github.com/leolee99/CLIP_ITM).
 
 
 ## Requirements
